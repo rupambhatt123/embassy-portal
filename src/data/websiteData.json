@@ -1,0 +1,1623 @@
+{
+  "common": {
+    "siteName": "Diplomatic Mission & Consular Wing",
+    "phone": "+1 000 000 000",
+    "email": "support@xyz.com",
+    "address": "100 S Main Street, New York, NY 10001",
+    "socialLinks": {
+      "facebook": "https://facebook.com",
+      "instagram": "https://instagram.com",
+      "whatsapp": "https://whatsapp.com"
+    }
+  },
+  "categories": {
+    "DiplomaticMission": {
+      "templateComponents": {
+        "template-1": {
+          "shared": {
+            "Topbar": "DiplomaticTopbar1",
+            "Header": "DiplomaticHeader1",
+            "Footer": "DiplomaticFooter1"
+          },
+          "pages": {
+            "home": {
+              "components": [
+                { "key": "Banner", "component": "DiplomaticBanner1" },
+                { "key": "About", "component": "DiplomaticAbout1" },
+                { "key": "Services", "component": "DiplomaticServices1" },
+                { "key": "Visa", "component": "DiplomaticVisa1" },
+                { "key": "Staff", "component": "DiplomaticStaff1" },
+                { "key": "Blog", "component": "DiplomaticBlog1" },
+                { "key": "Contact", "component": "DiplomaticContact1" }
+              ]
+            },
+            "about": {
+              "components": [
+                { "key": "AboutPage", "component": "DiplomaticAboutPage1" }
+              ]
+            },
+            "services": {
+              "components": [
+                { "key": "ServicesPage", "component": "DiplomaticServicesPage1" }
+              ]
+            },
+            "serviceDetail": {
+              "components": [
+                { "key": "ServiceDetailPage", "component": "DiplomaticServiceDetail1" }
+              ]
+            },
+            "visas": {
+              "components": [
+                { "key": "VisaPage", "component": "DiplomaticVisaPage1" }
+              ]
+            },
+            "visaDetail": {
+              "components": [
+                { "key": "VisaDetailPage", "component": "DiplomaticVisaDetail1" }
+              ]
+            },
+            "staff": {
+              "components": [
+                { "key": "StaffPage", "component": "DiplomaticStaffPage1" }
+              ]
+            },
+            "blog": {
+              "components": [
+                { "key": "BlogsPage", "component": "DiplomaticBlogsPage1" }
+              ]
+            },
+            "blogDetail": {
+              "components": [
+                { "key": "BlogDetailPage", "component": "DiplomaticBlogDetail1" }
+              ]
+            },
+            "faqs": {
+              "components": [
+                { "key": "FaqsPage", "component": "DiplomaticFaqsPage1" }
+              ]
+            },
+            "contact": {
+              "components": [
+                { "key": "ContactPage", "component": "DiplomaticContactPage1" }
+              ]
+            },
+            "appointment": {
+              "components": [
+                { "key": "AppointmentPage", "component": "DiplomaticAppointmentPage1" }
+              ]
+            }
+          }
+        }
+      },
+      "sections": {
+        "Topbar": {
+          "variants": {
+            "DiplomaticTopbar1": {
+              "address": "Shantipath, Chanakyapuri, New Delhi 110021",
+              "phone": "+91 11 2419 8000",
+              "email": "support-india@ustraveldocs.com",
+              "appointmentButtonText": "BOOK APPOINTMENT",
+              "appointmentButtonLink": "/appointment"
+            }
+          }
+        },
+        "Header": {
+          "variants": {
+            "DiplomaticHeader1": {
+              "logo": "/logo.webp",
+              "navLinks": [
+                { "title": "HOME", "path": "/" },
+                { "title": "ABOUT US", "path": "/about" },
+                {
+                  "title": "SERVICES",
+                  "path": "/services",
+                  "children": [
+                    { "title": "Passport Renewals", "path": "/services/passport-renewals" },
+                    { "title": "Birth Abroad (CRBA)", "path": "/services/birth-abroad-crba" },
+                    { "title": "Hague Apostille & Notarials", "path": "/services/legal-notarials-apostille" },
+                    { "title": "Emergency Crisis Desk", "path": "/services/emergency-crisis-desk" },
+                    { "title": "Emergency Passports", "path": "/services/emergency-temporary-passports" },
+                    { "title": "Corporate Attestations", "path": "/services/corporate-attestations" }
+                  ]
+                },
+                {
+                  "title": "VISAS",
+                  "path": "/visas",
+                  "children": [
+                    { "title": "B-1 / B-2 Visitors", "path": "/visas/b1-b2-visitors" },
+                    { "title": "F-1 / M-1 Students", "path": "/visas/f1-m1-students" },
+                    { "title": "H-1B Specialty Workers", "path": "/visas/h1b-specialty-workers" },
+                    { "title": "L-1 Intra-Company", "path": "/visas/l1-intra-company-transfers" },
+                    { "title": "O-1 Extraordinary", "path": "/visas/o1-extraordinary-talent" },
+                    { "title": "EB-5 Investor", "path": "/visas/eb5-investor-residency" }
+                  ]
+                },
+                { "title": "TEAM", "path": "/staff" },
+                { "title": "BLOGS", "path": "/blogs" },
+                { "title": "FAQS", "path": "/faqs" },
+                { "title": "CONTACT US", "path": "/contact" }
+              ],
+              "ctaButton": {
+                "text": "APPOINTMENT",
+                "path": "/appointment"
+              }
+            }
+          }
+        },
+        "Banner": {
+          "variants": {
+            "DiplomaticBanner1": {
+              "slideMs": 6000,
+              "slides": [
+                {
+                  "id": 1,
+                  "titleLine1": "Embassy & Consular",
+                  "titleHighlight": "Affairs in India",
+                  "image": "/about3.webp"
+                },
+                {
+                  "id": 2,
+                  "titleLine1": "Priority Citizen",
+                  "titleHighlight": "Protection & Care",
+                  "image": "/hero1.webp"
+                },
+                {
+                  "id": 3,
+                  "titleLine1": "Sovereign Bilateral",
+                  "titleHighlight": "Diplomatic Relations",
+                  "image": "/hero3.webp"
+                }
+              ]
+            }
+          }
+        },
+        "About": {
+          "variants": {
+            "DiplomaticAbout1": {
+              "badge": "About us",
+              "headingLine1": "Strengthen your ties with",
+              "headingLine2": "diplomatic mission.",
+              "description": "We provide sovereign representation, expedited citizen passports, visa processing, and strategic trade partnerships under the Vienna Convention.",
+              "badgeText": "VIENNA CONVENTION • CONSULAR CARE • TRADE ACCORDS •",
+              "images": {
+                "arch": "/about1.webp",
+                "circle": "/about2.webp",
+                "blob": "/about3.webp"
+              },
+              "highlights": [
+                {
+                  "icon": "ShieldCheck",
+                  "title": "Vienna Accord",
+                  "subtitle": "Sovereign Legal Seal"
+                },
+                {
+                  "icon": "Globe2",
+                  "title": "Bilateral Pacts",
+                  "subtitle": "5 Consular Enclaves"
+                },
+                {
+                  "icon": "Users2",
+                  "title": "Citizen Welfare",
+                  "subtitle": "24/7 Consular Protection"
+                },
+                {
+                  "icon": "Scale",
+                  "title": "Trade Accords",
+                  "subtitle": "Bilateral Commerce Link"
+                }
+              ],
+              "ctaButton": {
+                "text": "Explore about us",
+                "href": "/about"
+              }
+            }
+          }
+        },
+        "Services": {
+          "variants": {
+            "DiplomaticServices1": {
+
+              "headingLine1": "Our",
+              "headingHighlight": "services",
+              "viewAllText": "View all services",
+              "viewAllHref": "/services",
+              "viewDossierText": "View details",
+              "items": [
+                {
+                  "slug": "passport-renewals",
+                  "title": "10-Year Adult & Child Passport Renewals",
+                  "tag": "Priority Processing",
+                  "description": "Official DS-82 mail-in services and in-person DS-11 consular interview appointments for lost, stolen, or expired passports.",
+                  "fee": "$130 Government Fee",
+                  "time": "2-3 Weeks Processing",
+                  "enclave": "New Delhi & All 4 Consulates",
+                  "image": "/service1.webp",
+                  "detailedOverview": "Adults and minors eligible for passport renewals can file through streamlined sovereign processing. Includes standard renewals, validity extensions, and passport book replacement under consular protocols.",
+                  "prerequisites": [
+                    "Current physical passport book",
+                    "Two 2x2 inch recent white background photos",
+                    "Form DS-82 or DS-11 completed electronically",
+                    "Receipt of statutory consular fee payment"
+                  ],
+                  "steps": [
+                    "Verify eligibility for mail-in vs in-person adjudication",
+                    "Assemble requisite forms and identity proofs",
+                    "Schedule appointment slot or submit via secure consular courier",
+                    "Biometric tracking and final issuance delivery"
+                  ]
+                },
+                {
+                  "slug": "birth-abroad-crba",
+                  "title": "Consular Report of Birth Abroad (CRBA)",
+                  "tag": "Citizenship Transmission",
+                  "description": "Issuance of official federal birth registration (Form FS-240) establishing sovereign citizenship for children born in India.",
+                  "fee": "$100 Official Fee",
+                  "time": "3-4 Weeks Turnaround",
+                  "enclave": "Consular Gate 1",
+                  "image": "/service2.webp",
+                  "detailedOverview": "A Consular Report of Birth Abroad (CRBA) documents that a child born outside the territory acquired citizenship at birth under the Immigration and Nationality Act.",
+                  "prerequisites": [
+                    "Official local birth certificate issued by municipal authority",
+                    "Parents' proof of sovereign citizenship and marriage record",
+                    "Evidence of physical presence prior to child's birth",
+                    "Completed Form eCRBA application"
+                  ],
+                  "steps": [
+                    "Complete online eCRBA application portal submission",
+                    "Upload digital copies of civil certificates",
+                    "Attend mandatory in-person consular interview with the infant",
+                    "Issuance of Form FS-240 and simultaneous first passport"
+                  ]
+                },
+                {
+                  "slug": "legal-notarials-apostille",
+                  "title": "Hague Apostille & Legal Notarials",
+                  "tag": "Sovereign Attestation",
+                  "description": "Consular sworn statements, power of attorney authentications, real estate deeds, and educational credential verifications.",
+                  "fee": "$50 Per Seal / Notary",
+                  "time": "Same Day Appointments",
+                  "enclave": "Notarial Section",
+                  "image": "/service3.webp",
+                  "detailedOverview": "Consular officers execute notarial services including oaths, affidavits, statutory declarations, and signature acknowledgements for legal presentation across international borders.",
+                  "prerequisites": [
+                    "Valid sovereign government-issued photo ID",
+                    "Unsigned documents (must be signed before a consular officer)",
+                    "Understanding of document contents (officers do not provide legal counsel)",
+                    "Applicable notarial seal fee"
+                  ],
+                  "steps": [
+                    "Book an official notarial appointment slot",
+                    "Present original valid photo identification",
+                    "Sign forms in presence of the presiding Vice Consul",
+                    "Affixation of official consular seal and dry stamp"
+                  ]
+                },
+                {
+                  "slug": "emergency-crisis-desk",
+                  "title": "24/7 Sovereign Emergency Crisis Desk",
+                  "tag": "Immediate Protection",
+                  "description": "Immediate emergency aid for hospitalized citizens, missing individuals, legal arrests, and emergency evacuation flights.",
+                  "fee": "Direct Sovereign Assistance",
+                  "time": "Immediate 24/7 Hotline",
+                  "enclave": "Emergency Operations",
+                  "image": "/service4.webp",
+                  "detailedOverview": "Dedicated sovereign duty officers provide continuous 24/7 emergency response for citizens facing legal detention, major medical emergencies, destitution, or armed conflict evacuation.",
+                  "prerequisites": [
+                    "Citizen registration details or passport number",
+                    "Local contact and hospital or police report reference",
+                    "Direct emergency contact point in home country"
+                  ],
+                  "steps": [
+                    "Call the 24/7 consular emergency hotline",
+                    "Immediate liaison with local law enforcement or hospital authorities",
+                    "Deployment of consular assistance officer if required",
+                    "Repatriation coordination or emergency funds transfer"
+                  ]
+                },
+                {
+                  "slug": "emergency-temporary-passports",
+                  "title": "Emergency Temporary Passports",
+                  "tag": "Urgent Departure",
+                  "description": "Same-day urgent purple emergency travel documents issued for stranded travelers with immediate flights.",
+                  "fee": "$100 Statutory Charge",
+                  "time": "Issued within 24 Hours",
+                  "enclave": "",
+                  "image": "/service5.webp",
+                  "detailedOverview": "Limited-validity emergency passports issued on an expedited basis for travelers whose original passports were stolen or damaged and who possess urgent ticketed departures within 24–48 hours.",
+                  "prerequisites": [
+                    "Confirmed airline itinerary departing within 48 hours",
+                    "Police report for stolen or lost documents",
+                    "Proof of citizenship (birth cert copy, old passport scan)",
+                    "Two passport photos"
+                  ],
+                  "steps": [
+                    "Walk-in appointment under urgent crisis protocol",
+                    "Instant review and identity verification check",
+                    "Production of limited-validity emergency travel book",
+                    "Same-day handover"
+                  ]
+                },
+                {
+                  "slug": "corporate-attestations",
+                  "title": "Commercial Manifest & Corporate Attestations",
+                  "tag": "Economic Desk",
+                  "description": "Authenticating Indo-U.S. bilateral shipping certificates, commercial invoices, and corporate legal proxies.",
+                  "fee": "$80 Consular Charge",
+                  "time": "48-72 Hours",
+                  "enclave": "Trade Verification Cell",
+                  "image": "/service6.webp",
+                  "detailedOverview": "Certification of enterprise manifests, board resolutions, certificates of origin, and international trade authorizations under bilateral commerce agreements.",
+                  "prerequisites": [
+                    "Company registration certificate & board resolution",
+                    "Original signed manifest or invoice",
+                    "Trade association authentication stamp",
+                    "Statutory commercial verification fee"
+                  ],
+                  "steps": [
+                    "Submit digital manifest via economic portal",
+                    "Physical verification at Trade Verification Cell",
+                    "Application of consular commerce seal",
+                    "Dispatch to authorized company representative"
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        "Visa": {
+          "variants": {
+            "DiplomaticVisa1": {
+              "headingWords": ["Visas", "&", "Immigration"],
+              "autoplayMs": 4000,
+              "flightPath": "M0 380 C 300 40, 800 40, 1100 260 S 1600 420, 1800 120",
+              "marqueeText": "B-1 / B-2  •  F-1 / M-1  •  H-1B  •  L-1  •  O-1  •  EB-5  •  ",
+              "protocolsLinkText": "Application protocols",
+              "protocolsHref": "/visas",
+              "bottomBtnText": "View all visa protocols",
+              "bottomBtnHref": "/visas",
+              "visas": [
+                {
+                  "id": 1,
+                  "icon": "Plane",
+                  "code": "B-1 / B-2",
+                  "title": "Business & Tourism Visitors",
+                  "tag": "DS-160 Standard",
+                  "description": "Official non-immigrant clearance for leisure transit, business negotiations, and sovereign symposium participation.",
+                  "fee": "$185 MRV Fee",
+                  "validity": "10-Year Multiple Entry",
+                  "image": "/visa1.webp"
+                },
+                {
+                  "id": 2,
+                  "icon": "GraduationCap",
+                  "code": "F-1 / M-1",
+                  "title": "Academic & Student Exchange",
+                  "tag": "Priority Windows",
+                  "description": "Expedited consular appointment slots for undergraduate, master's degree, and vocational academic programs in the U.S.",
+                  "fee": "$185 + SEVIS I-901",
+                  "validity": "Duration of Status (D/S)",
+                  "image": "/visa2.webp"
+                },
+                {
+                  "id": 3,
+                  "icon": "Briefcase",
+                  "code": "H-1B Specialty",
+                  "title": "Skilled Corporate Specialists",
+                  "tag": "Petition-Based",
+                  "description": "Employment authorization clearance for technology, engineering, and research professionals with approved I-129.",
+                  "fee": "$205 Consular Fee",
+                  "validity": "Up to 3 Years (Renewable)",
+                  "image": "/visa3.webp"
+                },
+                {
+                  "id": 4,
+                  "icon": "Building",
+                  "code": "L-1 Intra-Company",
+                  "title": "Executive & Managerial Transfers",
+                  "tag": "Blanket & Individual",
+                  "description": "Fast-track adjudication for multinational executives and specialized technical directors transferring to U.S. branches.",
+                  "fee": "$205 Fraud Prev. Fee",
+                  "validity": "Up to 7 Years",
+                  "image": "/hero3.webp"
+                },
+                {
+                  "id": 5,
+                  "icon": "Award",
+                  "code": "O-1 Extraordinary",
+                  "title": "Sciences, Arts & Athletics",
+                  "tag": "Distinguished Talent",
+                  "description": "Specialized visa classification for individuals demonstrating extraordinary achievement and national recognition.",
+                  "fee": "$205 Standard",
+                  "validity": "Event Specific",
+                  "image": "/visa4.webp"
+                },
+                {
+                  "id": 6,
+                  "icon": "TrendingUp",
+                  "code": "EB-5 Sovereign",
+                  "title": "Immigrant Investor Program",
+                  "tag": "Permanent Residency",
+                  "description": "Direct immigrant path for accredited capital investors financing regional job-creating industrial enterprises.",
+                  "fee": "Direct Investment",
+                  "validity": "Conditional Green Card",
+                  "image": "/hero1.webp"
+                }
+              ]
+            }
+          }
+        },
+        "Staff": {
+          "variants": {
+            "DiplomaticStaff1": {
+              "headingLine1": "OUR",
+              "headingHighlight": "TEAM",
+              "autoplayMs": 4500,
+              "viewAllText": "View all profiles",
+              "viewAllHref": "/staff",
+              "sealText": "AMBASSADOR • DEPUTY CHIEF OF MISSION • CONSULAR AFFAIRS • AMBASSADOR • DEPUTY CHIEF OF MISSION •",
+              "envoys": [
+                {
+                  "id": 1,
+                  "name": "Jonathan Reynolds",
+                  "role": "Ambassador Extraordinary & Plenipotentiary",
+                  "department": "Executive Mission Leadership",
+                  "bio": "Leading sovereign bilateral diplomacy, strategic defense agreements, and commercial partnerships across India.",
+                  "image": "/staff1.webp"
+                },
+                {
+                  "id": 2,
+                  "name": "Dr. Sarah Chen",
+                  "role": "Deputy Chief of Mission",
+                  "department": "Diplomatic Affairs & Operations",
+                  "bio": "Supervising mission governance, inter-agency coordination, and bilateral outreach across all regional consulates.",
+                  "image": "/staff2.webp"
+                },
+                {
+                  "id": 3,
+                  "name": "Marcus Vance",
+                  "role": "Minister Counselor for Consular Affairs",
+                  "department": "Consular Services Wing",
+                  "bio": "Overseeing American citizen services, expedited passport renewals, and legitimate travel visa facilitation.",
+                  "image": "/staff3.webp"
+                }
+              ]
+            }
+          }
+        },
+        "Blog": {
+          "variants": {
+            "DiplomaticBlog1": {
+              "badge": "Our blog & insights",
+              "headingLine1": "Latest insights &",
+              "headingLine2": "Diplomatic updates",
+              "marqueeA": "Visa advisories  •  Trade accords  •  Consular notices  •  Press bulletins  •  ",
+              "marqueeB": "Chancery updates  •  Citizen care  •  Apostille  •  Security guidelines  •  ",
+              "autoplayMs": 4500,
+              "readAdvisoryBtnText": "Read advisory",
+              "viewAllBtnText": "View all blogs",
+              "viewAllLink": "/blogs",
+              "posts": [
+                {
+                  "id": 1,
+                  "title": "New Non-Immigrant Interview Waiver Slots Released",
+                  "category": "Visa Advisory",
+                  "summary": "Consular sections announce expanded dropbox eligibility for renewal applicants across Chancery and consulates.",
+                  "image": "/service2.webp"
+                },
+                {
+                  "id": 2,
+                  "title": "Consular Guidance for Fall Semester Student Visas",
+                  "category": "Academic Missions",
+                  "summary": "Essential briefing on expedited I-20 document clearance, SEVIS validations, and consulate security windows.",
+                  "image": "/hero1.webp"
+                },
+                {
+                  "id": 3,
+                  "title": "Bilateral Indo-U.S. Critical Tech & Trade Accord",
+                  "category": "Economic Affairs",
+                  "summary": "Milestone commercial pact expanding semiconductor investment corridors and high-skill corporate mobility.",
+                  "image": "/service6.webp"
+                },
+                {
+                  "id": 4,
+                  "title": "Hague Apostille & Civil Document Authentication",
+                  "category": "Consular Affairs",
+                  "summary": "Standardized protocols for notarials, powers of attorney, and commercial seal verifications.",
+                  "image": "/service4.webp"
+                },
+                {
+                  "id": 5,
+                  "title": "Overseas Citizen Passports & CRBA Biometric Portals",
+                  "category": "Citizen Care",
+                  "summary": "Online payment gateway updates and mandatory documentation checklist for consular report of birth abroad.",
+                  "image": "/visa2.webp"
+                },
+                {
+                  "id": 6,
+                  "title": "Diplomatic Security Guidelines for Consular Enclaves",
+                  "category": "Chancery Security",
+                  "summary": "Updated entry clearance checklists, prohibited electronics lists, and parking protocols for applicants.",
+                  "image": "/staff5.webp"
+                }
+              ]
+            }
+          }
+        },
+        "FAQ": {
+          "variants": {
+            "DiplomaticFAQ1": {
+              "badge": "FAQ",
+              "headingLine1": "Frequently asked",
+              "headingHighlight": "questions",
+              "description": "Find answers to common questions about consular gate screening, visa protocols, and passport services.",
+              "items": [
+                {
+                  "id": 1,
+                  "question": "What electronic devices are strictly prohibited inside the consular enclave?",
+                  "answer": "Smartphones, laptops, iPads, digital recording gadgets, cameras, and wearable fitness trackers with connectivity are not permitted beyond Security Gate 1. Secure token lockers are available at the outer checkpoint."
+                },
+                {
+                  "id": 2,
+                  "question": "How far in advance should I arrive before my scheduled interview slot?",
+                  "answer": "You should arrive no earlier than 15 minutes before your confirmed appointment time. Early entry is restricted by perimeter security to maintain crowd protocols."
+                },
+                {
+                  "id": 3,
+                  "question": "Does my passport need six months of validity beyond my intended travel date?",
+                  "answer": "Yes. All foreign travelers must hold a sovereign passport valid for at least six months beyond their departure date, unless exempted under bilateral country agreements."
+                },
+                {
+                  "id": 4,
+                  "question": "What is the standard processing turnaround for expedited 10-year passport renewals?",
+                  "answer": "Standard expedited DS-82 renewals typically take 2 to 3 weeks. Urgent emergency temporary passports can be cleared within 24 to 48 hours for verified departures."
+                },
+                {
+                  "id": 5,
+                  "question": "Can third parties or immigration attorneys accompany me to the consular window?",
+                  "answer": "In general, only the principal applicant and approved legal guardians of minors or special-needs individuals are permitted inside the sovereign adjudication hall."
+                },
+                {
+                  "id": 6,
+                  "question": "What fees and payment modes are accepted at the consular cashier window?",
+                  "answer": "We accept primary international credit cards, demand drafts drawn in favor of the diplomatic mission, and exact localized cash currency according to official daily exchange rates."
+                },
+                {
+                  "id": 7,
+                  "question": "How do I transmit a Consular Report of Birth Abroad (CRBA) for my newborn?",
+                  "answer": "Submit the online eCRBA application through the state portal, upload supporting birth certificates and parental proof of citizenship, and attend the scheduled verification appointment."
+                },
+                {
+                  "id": 8,
+                  "question": "Are interpreter and translation services provided during visa interviews?",
+                  "answer": "Consular officers conduct interviews in English and official regional state languages. External sworn translators are accommodated for specialized regional dialects."
+                },
+                {
+                  "id": 9,
+                  "question": "How do I request an emergency non-immigrant expedite appointment?",
+                  "answer": "Schedule the first available standard appointment slot, then file an online expedite request citing urgent medical emergencies, academic start dates, or unexpected business crises."
+                },
+                {
+                  "id": 10,
+                  "question": "What assistance is provided to citizens facing overseas legal or medical emergencies?",
+                  "answer": "The 24/7 Consular Emergency Taskforce coordinates hospital visits, liaison with local judicial authorities, authorized fund transfers, and issuance of one-way repatriation travel deeds."
+                }
+              ]
+            }
+          }
+        },
+        "Contact": {
+          "variants": {
+            "DiplomaticContact1": {
+              "badge": "CHANCERY & REGIONAL CONSULATES",
+              "headingLine": "Contact Us &",
+              "headingHighlight": "Consular Enclaves",
+              "autoplayMs": 4500,
+              "cardTag": "Diplomatic Mission Enclave",
+              "button": {
+                "label": "VIEW ALL LOCATIONS & GATES",
+                "href": "/contact"
+              },
+              "consulates": [
+                {
+                  "id": 1,
+                  "city": "New Delhi (Chancery)",
+                  "address": "Shantipath, Chanakyapuri, New Delhi 110021",
+                  "phone": "+91 11 2419 8000",
+                  "image": "/hero1.webp"
+                },
+                {
+                  "id": 2,
+                  "city": "Mumbai Consulate",
+                  "address": "C-49, G-Block, Bandra Kurla Complex (BKC), Mumbai 400051",
+                  "phone": "+91 22 2672 4000",
+                  "image": "/hero2.webp"
+                },
+                {
+                  "id": 3,
+                  "city": "Chennai Consulate",
+                  "address": "Gemini Circle, Anna Salai, Chennai 600006",
+                  "phone": "+91 44 2857 4000",
+                  "image": "/hero3.webp"
+                }
+              ]
+            }
+          }
+        },
+        "Footer": {
+          "variants": {
+            "DiplomaticFooter1": {
+              "logo": {
+                "src": "/logo.webp",
+                "alt": "Global Diplomatic Mission"
+              },
+              "aboutText": "Official sovereign representation facilitating diplomatic clearances, visa adjudications, and bilateral accords.",
+              "socialLinks": [
+                { "name": "Instagram", "href": "https://instagram.com" },
+                { "name": "Twitter", "href": "https://twitter.com" },
+                { "name": "WhatsApp", "href": "https://whatsapp.com" }
+              ],
+              "servicesHeading": "Our Services",
+              "servicesLinks": [
+                { "name": "Passport Issuance & Renewal", "href": "/#services" },
+                { "name": "Visa Processing & Clearance", "href": "/visas" },
+                { "name": "Consular Notarization & Legalization", "href": "/#services" },
+                { "name": "Emergency Citizen Repatriation", "href": "/#services" },
+                { "name": "Civil Document Attestation", "href": "/#services" },
+                { "name": "Diplomatic & Official Protocol", "href": "/#services" }
+              ],
+              "quickNavHeading": "Quick Navigation",
+              "quickNavLinks": [
+                { "name": "About Us", "href": "/#about" },
+                { "name": "Visa Information", "href": "/visas" },
+                { "name": "Blogs", "href": "/blogs" },
+                { "name": "Embassy Staff", "href": "/#staff" },
+                { "name": "Contact Us", "href": "/#contact" },
+                { "name": "FAQs", "href": "/#faqs" }
+              ],
+              "contactHeading": "Consular Desk",
+              "contactDetails": {
+                "email": {
+                  "address": "support@xyz.com",
+                  "label": "Diplomatic Clearance Query"
+                },
+                "phone": {
+                  "number": "+1 000 000 000",
+                  "label": "24/7 Consular Emergency Line"
+                },
+                "address": {
+                  "location": "Chancery Enclave, Diplomatic District",
+                  "label": "Official Consular Premises"
+                }
+              },
+              "legal": {
+                "copyright": "© 2026 Global Diplomatic Mission & Consular Corp. All rights reserved.Powered by Lestow."
+              }
+            }
+          }
+        },
+        "AboutPage": {
+          "variants": {
+            "DiplomaticAboutPage1": {
+              "banner": {
+                "title": "About the Diplomatic Mission",
+                "description": "Sovereign stewardship, bilateral harmony, and consular support under international treaties.",
+                "bgImage": "/service5.webp",
+                "breadcrumbs": [{ "label": "About Us" }]
+              },
+              "cooperationSection": {
+                "badge": "Strategic bilateral protocol",
+                "headingLine1": "Consular Sovereignty &",
+                "headingHighlight": "Defense Cooperation",
+                "description": "Operating across principal diplomatic chanceries and accredited consular enclaves, the mission facilitates high-level bilateral defense corridors, aerospace cooperation, and critical technological compacts between sovereign partners.",
+                "stats": [
+                  {
+                    "type": "count",
+                    "value": 1000000,
+                    "suffix": "+",
+                    "label": "Annual visas & diplomatic clearances",
+                    "gradient": "from-amber-600 to-amber-400"
+                  },
+                  {
+                    "type": "text",
+                    "value": "24 / 7 / 365",
+                    "label": "Continuous sovereign crisis hotline",
+                    "gradient": "from-sky-700 to-cyan-500"
+                  }
+                ],
+                "image": "/service6.webp"
+              },
+              "treatySection": {
+                "badge": "International legal framework",
+                "watermarkYear": "1963",
+                "headingLine1": "The 1963",
+                "headingHighlight1": "Vienna",
+                "headingHighlight2": "Convention",
+                "headingLine2": "Governance",
+                "description": "Every consular activity, document legalization, and citizen protection process is codified and guaranteed by international law:",
+                "pillars": [
+                  {
+                    "icon": "FileCheck",
+                    "tone": "gold",
+                    "title": "Inviolable Archives",
+                    "text": "Diplomatic pouch seals, classified consular archives, and confidential citizen registrations remain completely exempt from external legal jurisdiction."
+                  },
+                  {
+                    "icon": "Building2",
+                    "tone": "cyan",
+                    "title": "Territorial Immunity",
+                    "text": "Sovereign chancery grounds and accredited consular enclaves hold extraterritorial protection status, guaranteeing safe passage for diplomatic personnel."
+                  },
+                  {
+                    "icon": "Clock",
+                    "tone": "gold",
+                    "title": "Emergency Repatriation",
+                    "text": "Immediate consular access, attorney referrals, emergency flight manifests, and urgent temporary passport issuance for distressed travelers."
+                  }
+                ],
+                "bottomBar": {
+                  "text": "Need immediate official consular documentation or visa clearance assistance?",
+                  "buttonLabel": "Explore All Services",
+                  "buttonHref": "/services"
+                }
+              }
+            }
+          }
+        },
+        "ServicesPage": {
+          "variants": {
+            "DiplomaticServicesPage1": {
+              "banner": {
+                "title": "Official Consular Services",
+                "breadcrumbs": [{ "label": "Consular Services" }]
+              },
+              "badge": "What we offer",
+              "headingLine1": "Every consular",
+              "headingHighlight": "service",
+              "actionBtnText": "View Details"
+            }
+          }
+        },
+        "ServiceDetailPage": {
+          "variants": {
+            "DiplomaticServiceDetail1": {
+              "sealText": "OFFICIAL CONSULAR PROCEDURE • VERIFIED PROTOCOL • OFFICIAL CONSULAR PROCEDURE • VERIFIED PROTOCOL •",
+              "section1Number": "01",
+              "section1Title": "Prerequisites & Required Documents",
+              "section2Number": "02",
+              "section2Title": "Standard Operating Procedure",
+              "snapshotTitle": "Protocol Snapshot",
+              "labels": {
+                "fee": "Consular fee",
+                "time": "Processing time",
+                "enclave": "Enclave gate"
+              },
+              "appointmentBtnText": "Schedule Appointment",
+              "appointmentHref": "/appointment"
+            }
+          }
+        },
+        "VisaPage": {
+          "variants": {
+            "DiplomaticVisaPage1": {
+              "banner": {
+                "title": "Official Visa Categories & Clearances",
+                "description": "Comprehensive guide to non-immigrant, student, specialty employment, and permanent residency authorizations.",
+                "bgImage": "/service5.webp",
+                "breadcrumbs": [{ "label": "Visa Directory" }]
+              },
+              "badge": "Visa directory",
+              "headingLine1": "Choose your visa",
+              "headingHighlight": "path",
+              "actionBtnText": "View visa details",
+              "routes": {
+                "routeA": "M0 380 C 300 40, 800 40, 1100 260 S 1600 420, 1800 120",
+                "routeB": "M0 140 C 400 440, 900 440, 1200 220 S 1650 -40, 1800 260"
+              },
+              "ticker": "B-1 / B-2  •  F-1 / M-1  •  H-1B  •  L-1  •  O-1  •  EB-5  •  ",
+              "visas": [
+                {
+                  "id": 1,
+                  "slug": "b1-b2-visitors",
+                  "icon": "Plane",
+                  "code": "B-1 / B-2",
+                  "title": "Business & Tourism Visitors",
+                  "tag": "DS-160 Standard",
+                  "description": "Official non-immigrant clearance for leisure transit, business negotiations, and sovereign symposium participation.",
+                  "fee": "$185 MRV Fee",
+                  "validity": "10-Year Multiple Entry",
+                  "image": "/visa1.webp"
+                },
+                {
+                  "id": 2,
+                  "slug": "f1-m1-students",
+                  "icon": "GraduationCap",
+                  "code": "F-1 / M-1",
+                  "title": "Academic & Student Exchange",
+                  "tag": "Priority Windows",
+                  "description": "Expedited consular appointment slots for undergraduate, master's degree, and vocational academic programs in the U.S.",
+                  "fee": "$185 + SEVIS I-901",
+                  "validity": "Duration of Status (D/S)",
+                  "image": "/visa2.webp"
+                },
+                {
+                  "id": 3,
+                  "slug": "h1b-specialty-workers",
+                  "icon": "Briefcase",
+                  "code": "H-1B Specialty",
+                  "title": "Skilled Corporate Specialists",
+                  "tag": "Petition-Based",
+                  "description": "Employment authorization clearance for technology, engineering, and research professionals with approved I-129.",
+                  "fee": "$205 Consular Fee",
+                  "validity": "Up to 3 Years (Renewable)",
+                  "image": "/visa3.webp"
+                },
+                {
+                  "id": 4,
+                  "slug": "l1-intra-company-transfers",
+                  "icon": "Building",
+                  "code": "L-1 Intra-Company",
+                  "title": "Executive & Managerial Transfers",
+                  "tag": "Blanket & Individual",
+                  "description": "Fast-track adjudication for multinational executives and specialized technical directors transferring to U.S. branches.",
+                  "fee": "$205 Fraud Prev. Fee",
+                  "validity": "Up to 7 Years",
+                  "image": "/hero3.webp"
+                },
+                {
+                  "id": 5,
+                  "slug": "o1-extraordinary-talent",
+                  "icon": "Award",
+                  "code": "O-1 Extraordinary",
+                  "title": "Sciences, Arts & Athletics",
+                  "tag": "Distinguished Talent",
+                  "description": "Specialized visa classification for individuals demonstrating extraordinary achievement and national recognition.",
+                  "fee": "$205 Standard",
+                  "validity": "Event Specific",
+                  "image": "/visa4.webp"
+                },
+                {
+                  "id": 6,
+                  "slug": "eb5-investor-residency",
+                  "icon": "TrendingUp",
+                  "code": "EB-5 Sovereign",
+                  "title": "Immigrant Investor Program",
+                  "tag": "Permanent Residency",
+                  "description": "Direct immigrant path for accredited capital investors financing regional job-creating industrial enterprises.",
+                  "fee": "Direct Investment",
+                  "validity": "Conditional Green Card",
+                  "image": "/hero1.webp"
+                }
+              ]
+            }
+          }
+        },
+        "VisaDetailPage": {
+          "variants": {
+            "DiplomaticVisaDetail1": {
+              "marqueeA": "Consular clearances  •  Visa protocols  •  Directives  •  Biometric capture  •  ",
+              "marqueeB": "Statutory fees  •  Entry eligibility  •  Adjudication stages  •  Sovereign mission  •  ",
+              "statusBadge": "Active Protocol",
+              "metrics": {
+                "feeLabel": "Statutory Fee",
+                "validityLabel": "Validity Window",
+                "processingTimeLabel": "Processing Turnaround"
+              },
+              "sectionTitles": {
+                "eligibility": "Eligibility Requirements",
+                "documentation": "Mandatory Documentation",
+                "procedure": "Application Protocol Stages"
+              },
+              "sidebar": {
+                "appointmentCategoryBadge": "Consular Appointment Booking",
+                "appointmentTitleTemplate": "Schedule {code} Biometric & Interview Slot",
+                "appointmentDescription": "Secure your consular verification appointment directly through the authorized mission scheduling portal.",
+                "appointmentBtnText": "Book Visa Appointment",
+                "appointmentHref": "/appointment",
+                "otherVisasTitle": "Other Visa Classifications"
+              },
+              "visas": [
+                {
+                  "id": 1,
+                  "slug": "b1-b2-visitors",
+                  "code": "B-1 / B-2",
+                  "title": "Business & Tourism Visitors",
+                  "tag": "DS-160 Standard",
+                  "description": "Official non-immigrant clearance for leisure transit, business negotiations, and sovereign symposium participation.",
+                  "fee": "$185 MRV Fee",
+                  "validity": "10-Year Multiple Entry",
+                  "processingTime": "3 to 5 business days post-interview",
+                  "image": "/visa1.webp",
+                  "overview": "The B-1/B-2 visitor visa is designated for individuals traveling for temporary business conferences, legal negotiations, tourism, medical treatments, or personal family visits without engaging in local employment.",
+                  "eligibility": [
+                    "Proof of temporary travel intent with defined departure itinerary.",
+                    "Evidence of sufficient financial funds to cover foreign lodging and transit.",
+                    "Clear ties to your home country (employment, property, family commitments)."
+                  ],
+                  "requiredDocs": [
+                    "Valid passport with at least six months validity remaining.",
+                    "DS-160 online barcode confirmation sheet.",
+                    "MRV consular fee payment receipt.",
+                    "Official invitation letters or hotel reservations."
+                  ],
+                  "steps": [
+                    "Complete the online DS-160 application form.",
+                    "Pay the non-refundable MRV consular booking fee.",
+                    "Schedule biometric and consular officer interview slots.",
+                    "Attend the consular enclave appointment with original documents."
+                  ]
+                },
+                {
+                  "id": 2,
+                  "slug": "f1-m1-students",
+                  "code": "F-1 / M-1",
+                  "title": "Academic & Student Exchange",
+                  "tag": "Priority Windows",
+                  "description": "Expedited consular appointment slots for undergraduate, master's degree, and vocational academic programs in the U.S.",
+                  "fee": "$185 + SEVIS I-901",
+                  "validity": "Duration of Status (D/S)",
+                  "processingTime": "Expedited summer student priority window",
+                  "image": "/visa2.webp",
+                  "overview": "Designed for full-time international scholars accepted into accredited colleges, universities, secondary schools, or approved vocational academies under authorized SEVP programs.",
+                  "eligibility": [
+                    "Official acceptance from an accredited SEVP-certified institution.",
+                    "SEVIS fee clearance and active Form I-20 document.",
+                    "Demonstrated English proficiency and sufficient academic funding."
+                  ],
+                  "requiredDocs": [
+                    "Original signed Form I-20 issued by the institution.",
+                    "SEVIS I-901 fee receipt.",
+                    "Academic diplomas, transcripts, and standardized test scorecards.",
+                    "Proof of bank liquidity and tuition payment guarantees."
+                  ],
+                  "steps": [
+                    "Obtain Form I-20 from your admitted university or college.",
+                    "Remit the mandatory SEVIS I-901 fee online.",
+                    "Complete Form DS-160 and schedule your interview window.",
+                    "Appear for in-person biometric scanning and consular verification."
+                  ]
+                },
+                {
+                  "id": 3,
+                  "slug": "h1b-specialty-workers",
+                  "code": "H-1B Specialty",
+                  "title": "Skilled Corporate Specialists",
+                  "tag": "Petition-Based",
+                  "description": "Employment authorization clearance for technology, engineering, and research professionals with approved I-129.",
+                  "fee": "$205 Consular Fee",
+                  "validity": "Up to 3 Years (Renewable)",
+                  "processingTime": "1 to 2 weeks (Dropbox eligible in select cases)",
+                  "image": "/visa3.webp",
+                  "overview": "Non-immigrant visa granting temporary authorization for highly qualified foreign professionals in specialized occupations requiring theoretical or practical application of higher expertise.",
+                  "eligibility": [
+                    "An approved Form I-797 Notice of Action petition from USCIS.",
+                    "Bachelor's degree or higher in the specialized field of employment.",
+                    "Certified Labor Condition Application (LCA) filed by sponsoring employer."
+                  ],
+                  "requiredDocs": [
+                    "Form I-797 approval notice (original copy recommended).",
+                    "Copy of employer petition I-129 and LCA filing.",
+                    "Official academic degree certificates and credential evaluations.",
+                    "Current employment verification letter and pay statements."
+                  ],
+                  "steps": [
+                    "Sponsoring employer files and secures Form I-129 approval.",
+                    "Submit Form DS-160 and attach your I-797 receipt identification.",
+                    "Book biometric and consular interview appointments.",
+                    "Submit passports and documentation for consular adjudication."
+                  ]
+                },
+                {
+                  "id": 4,
+                  "slug": "l1-intra-company-transfers",
+                  "code": "L-1 Intra-Company",
+                  "title": "Executive & Managerial Transfers",
+                  "tag": "Blanket & Individual",
+                  "description": "Fast-track adjudication for multinational executives and specialized technical directors transferring to U.S. branches.",
+                  "fee": "$205 Fraud Prev. Fee",
+                  "validity": "Up to 7 Years",
+                  "processingTime": "Priority mission handling",
+                  "image": "/visa4.webp",
+                  "overview": "Facilitates the temporary relocation of executive managers and specialized technical personnel from affiliated foreign entities to parent, branch, or subsidiary organizations abroad.",
+                  "eligibility": [
+                    "Continuous employment for at least one year within past 3 years with affiliate.",
+                    "Executive, managerial, or proprietary specialized technical role.",
+                    "Legitimate qualifying corporate relationship between entities."
+                  ],
+                  "requiredDocs": [
+                    "Form I-129S (for Blanket L petitions) or Form I-797 approval.",
+                    "Detailed corporate organizational charts and position dossiers.",
+                    "Corporate tax returns and corporate registry documentation."
+                  ],
+                  "steps": [
+                    "Company files Individual Petition or coordinates Blanket L authorization.",
+                    "Submit DS-160 application and schedule consular interview.",
+                    "Pay consular and Fraud Prevention and Detection charges.",
+                    "Appear before the consular officer for mission clearance."
+                  ]
+                },
+                {
+                  "id": 5,
+                  "slug": "o1-extraordinary-talent",
+                  "code": "O-1 Extraordinary",
+                  "title": "Sciences, Arts & Athletics",
+                  "tag": "Distinguished Talent",
+                  "description": "Specialized visa classification for individuals demonstrating extraordinary achievement and national recognition.",
+                  "fee": "$205 Standard",
+                  "validity": "Event Specific",
+                  "processingTime": "5 to 7 business days",
+                  "image": "/service1.webp",
+                  "overview": "Reserved for world-class achievers in sciences, education, business, motion picture production, or athletics who possess sustained national or international acclaim.",
+                  "eligibility": [
+                    "Proven record of extraordinary ability confirmed by critical accolades.",
+                    "Approved Form I-129 petition filed by recognized agency or employer.",
+                    "Comprehensive itinerary of upcoming specialized engagements."
+                  ],
+                  "requiredDocs": [
+                    "Approved Form I-797 petition.",
+                    "Advisory opinions from peer groups or recognized labor organizations.",
+                    "Press clippings, patents, awards, or international certificates."
+                  ],
+                  "steps": [
+                    "U.S. sponsor or agent files Form I-129 with supporting portfolio.",
+                    "Upon approval, initiate DS-160 consular non-immigrant processing.",
+                    "Schedule appointment and present portfolio dossier at the window."
+                  ]
+                },
+                {
+                  "id": 6,
+                  "slug": "eb5-investor-residency",
+                  "code": "EB-5 Sovereign",
+                  "title": "Immigrant Investor Program",
+                  "tag": "Permanent Residency",
+                  "description": "Direct immigrant path for accredited capital investors financing regional job-creating industrial enterprises.",
+                  "fee": "Direct Investment",
+                  "validity": "Conditional Green Card",
+                  "processingTime": "Dependent on priority date schedule",
+                  "image": "/service4.webp",
+                  "overview": "Direct immigrant investor visa category enabling qualified individuals and their families to obtain permanent residency status by investing in authorized capital projects.",
+                  "eligibility": [
+                    "Statutory minimum investment in an approved Regional Center or enterprise.",
+                    "Creation or preservation of at least 10 full-time jobs for qualifying workers.",
+                    "Clear, traceable, and legitimate lawful source of all invested capital."
+                  ],
+                  "requiredDocs": [
+                    "Approved Form I-526E immigrant petition from USCIS.",
+                    "Comprehensive capital transfer statements and tax filings.",
+                    "Civil status certificates (birth, marriage, police clearances)."
+                  ],
+                  "steps": [
+                    "Submit immigrant investment petition to USCIS.",
+                    "Following approval, complete National Visa Center document processing.",
+                    "Attend comprehensive consular immigrant interview appointment.",
+                    "Obtain immigrant visa foil and complete green card port-of-entry."
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        "StaffPage": {
+          "variants": {
+            "DiplomaticStaffPage1": {
+              "banner": {
+                "title": "Diplomatic Leadership & Attachés",
+                "description": "Accredited envoys, ministerial counselors, and consular wing leadership serving the U.S. Mission in India.",
+                "bgImage": "/hero2.webp",
+                "breadcrumbs": [{ "label": "Mission Staff" }]
+              },
+              "badge": "Mission leadership",
+              "headingLine1": "Meet the officials serving",
+              "headingHighlight": "the Mission",
+              "staffMembers": [
+                {
+                  "id": 1,
+                  "name": "Jonathan Reynolds",
+                  "role": "Ambassador Extraordinary & Plenipotentiary",
+                  "department": "Executive Mission Leadership",
+                  "email": "ambassador-delhi@state.gov",
+                  "clearance": "Tier-1 Sovereign",
+                  "image": "/staff1.webp",
+                  "bio": "Directs bilateral defense pacts, semiconductor trade dialogues, and strategic diplomatic harmony."
+                },
+                {
+                  "id": 2,
+                  "name": "Dr. Sarah Chen",
+                  "role": "Deputy Chief of Mission (DCM)",
+                  "department": "Diplomatic Affairs & Governance",
+                  "email": "info@xyz.com",
+                  "clearance": "High Diplomatic",
+                  "image": "/staff2.webp",
+                  "bio": "Supervises mission operations across the Chancery and four regional consulates in India."
+                },
+                {
+                  "id": 3,
+                  "name": "Marcus Vance",
+                  "role": "Minister Counselor for Consular Affairs",
+                  "department": "Visa & Citizen Protection",
+                  "email": "info@xyz.com",
+                  "clearance": "Consular Chief",
+                  "image": "/staff3.webp",
+                  "bio": "Governs lawful travel authorization, passport issuance pipelines, and emergency evacuation protocols."
+                },
+                {
+                  "id": 4,
+                  "name": "Elena Rostova",
+                  "role": "Minister Counselor for Economic Affairs",
+                  "department": "Trade & Clean Energy Compacts",
+                  "email": "info@xyz.com",
+                  "clearance": "Strategic Economic",
+                  "image": "/staff4.webp",
+                  "bio": "Coordinates maritime supply chains, renewable energy accords, and technology exchange frameworks."
+                },
+                {
+                  "id": 5,
+                  "name": "Col. David Mitchell",
+                  "role": "Senior Defense Attaché",
+                  "department": "Military Cooperation & Defense Office",
+                  "email": "info@xyz.com",
+                  "clearance": "Military Secret",
+                  "image": "/staff5.webp",
+                  "bio": "Directs joint bilateral military maneuvers, aerospace security collaborations, and interoperability drills."
+                },
+                {
+                  "id": 6,
+                  "name": "Ananya Deshmukh",
+                  "role": "Cultural & Academic Attaché",
+                  "department": "Public Diplomacy & Fellowships",
+                  "email": "info@xyz.com",
+                  "clearance": "Diplomatic Affairs",
+                  "image": "/staff6.webp",
+                  "bio": "Administers Fulbright fellowships, STEM university linkages, and youth ambassador partnerships."
+                }
+              ]
+            }
+          }
+        },
+        "BlogsPage": {
+          "variants": {
+            "DiplomaticBlogsPage1": {
+              "banner": {
+                "title": "Official Blogs & Press Bulletins",
+                "description": "Verified communiqués, policy announcements, travel advisories, and strategic Indo-U.S. updates.",
+                "bgImage": "/visa4.webp",
+                "breadcrumbs": [{ "label": "Blogs & Newsroom" }]
+              },
+              "badge": "Newsroom",
+              "headingLine1": "Latest",
+              "headingHighlight": "dispatches & bulletins",
+              "searchPlaceholder": "Search press bulletins...",
+              "categories": ["All", "Visas", "Economy", "Advisories", "Education", "Services", "Defense"],
+              "tickerA": "Press bulletins  •  Travel advisories  •  Policy updates  •  Bilateral news  •  ",
+              "tickerB": "Official communiqués  •  Consular notices  •  Strategic dialogue  •  ",
+              "readDispatchBtnText": "Read full dispatch",
+              "emptyStateMessage": "No dispatches match your search. Try another keyword or category.",
+              "blogs": [
+                {
+                  "id": 1,
+                  "slug": "supplementary-visa-interview-slots-released",
+                  "title": "250K Supplementary Visa Interview Slots Released",
+                  "description": "Diplomatic mission fast-tracks student, tourist, and skilled worker appointments nationwide across all consulates.",
+                  "author": "Ambassador Press Office",
+                  "category": "Visas",
+                  "dateDay": "20",
+                  "dateMonth": "OCT",
+                  "year": "2026",
+                  "readTime": "4 min read",
+                  "image": "/about2.webp"
+                },
+                {
+                  "id": 2,
+                  "slug": "indo-us-critical-tech-semiconductor-accord",
+                  "title": "Indo-U.S. Critical Tech & Semiconductor Accord",
+                  "description": "Strengthening bilateral supply-chain resilience, AI fellowships, and clean energy compacts between both nations.",
+                  "author": "Consular Economic Desk",
+                  "category": "Economy",
+                  "dateDay": "25",
+                  "dateMonth": "OCT",
+                  "year": "2026",
+                  "readTime": "6 min read",
+                  "image": "/about3.webp"
+                },
+                {
+                  "id": 3,
+                  "slug": "consular-travel-advisory-digital-gate-directives",
+                  "title": "Consular Travel Advisory & Digital Gate Directives",
+                  "description": "Crucial instructions on biometric verification, valid travel deeds, and embassy security screening protocols.",
+                  "author": "Security & Regional Affairs",
+                  "category": "Advisories",
+                  "dateDay": "28",
+                  "dateMonth": "OCT",
+                  "year": "2026",
+                  "readTime": "3 min read",
+                  "image": "/visa2.webp"
+                },
+                {
+                  "id": 4,
+                  "slug": "stem-academic-exchange-2027-fellowships",
+                  "title": "STEM Academic Exchange: 2027 Fellowships Open",
+                  "description": "Full scholarship grants and streamlined J-1 exchange visitor processing launched for doctoral researchers.",
+                  "author": "Education & Cultural Wing",
+                  "category": "Education",
+                  "dateDay": "02",
+                  "dateMonth": "NOV",
+                  "year": "2026",
+                  "readTime": "5 min read",
+                  "image": "/service4.webp"
+                },
+                {
+                  "id": 5,
+                  "slug": "expedited-ds-82-passport-renewal-mail-in-pilot",
+                  "title": "Expedited DS-82 Passport Renewal Mail-In Pilot",
+                  "description": "Adult citizens can now renew 10-year official passports remotely without visiting physical consular gates.",
+                  "author": "American Citizen Services",
+                  "category": "Services",
+                  "dateDay": "08",
+                  "dateMonth": "NOV",
+                  "year": "2026",
+                  "readTime": "3 min read",
+                  "image": "/staff1.webp"
+                },
+                {
+                  "id": 6,
+                  "slug": "maritime-security-defense-dialogue-new-delhi",
+                  "title": "Maritime Security & Defense Dialogue in New Delhi",
+                  "description": "High-level bilateral envoys meet at Chancery to expand joint naval exercises and sovereign communication safety.",
+                  "author": "Defense Attaché Office",
+                  "category": "Defense",
+                  "dateDay": "12",
+                  "dateMonth": "NOV",
+                  "year": "2026",
+                  "readTime": "5 min read",
+                  "image": "/about3.webp"
+                }
+              ]
+            }
+          }
+        },
+        "BlogDetailPage": {
+          "variants": {
+            "DiplomaticBlogDetail1": {
+              "backBtnText": "Back to all press bulletins",
+              "backBtnHref": "/blogs",
+              "authorSubtitle": "Official sovereign press release",
+              "keyDirectivesTitle": "Key sovereign directives",
+              "shareText": "Share dossier",
+              "shareCopiedText": "Link copied",
+              "bookmarkText": "Bookmark",
+              "bookmarkedText": "Bookmarked",
+              "allFeedsText": "All press feeds",
+              "allFeedsHref": "/blogs",
+              "deskSection": {
+                "title": "Consular dispatch desk",
+                "description": "This communique is authenticated by the diplomatic press cell under the Vienna Convention on Consular Relations.",
+                "rows": [
+                  { "label": "Classification", "value": "Public diplomatic", "tone": "text-amber-700" },
+                  { "label": "Jurisdiction", "value": "All consular enclaves", "tone": "text-slate-800" }
+                ],
+                "ctaText": "Access consular services",
+                "ctaHref": "/services"
+              },
+              "relatedTitle": "Related press dispatches",
+              "blogs": [
+                {
+                  "id": 1,
+                  "slug": "supplementary-visa-interview-slots-released",
+                  "title": "250K Supplementary Visa Interview Slots Released",
+                  "description": "Diplomatic mission fast-tracks student, tourist, and skilled worker appointments nationwide across all consulates.",
+                  "author": "Ambassador Press Office",
+                  "category": "Visas",
+                  "dateDay": "20",
+                  "dateMonth": "OCT",
+                  "year": "2026",
+                  "readTime": "4 min read",
+                  "image": "/about2.webp",
+                  "content": [
+                    "In response to surging international travel demand and bilateral commercial engagements, the consular corps has officially released over 250,000 supplementary non-immigrant visa appointment slots across New Delhi, Mumbai, Chennai, Hyderabad, and Kolkata consular enclaves.",
+                    "The dedicated allocation prioritizes F-1 academic scholars, high-skill H-1B specialty workers, and B1/B2 commercial travelers. The initiative aims to dramatically reduce wait times ahead of the upcoming diplomatic summits and bilateral economic forums.",
+                    "All applicants with existing interview bookings are permitted to utilize the official consular booking engine to reschedule their appointments without forfeiting statutory consular fee payments."
+                  ],
+                  "bulletPoints": [
+                    "Immediate clearance priority for expedited F-1 student dossiers.",
+                    "Expanded waiver drop-box eligibility for select B1/B2 renewals.",
+                    "Extended processing windows across all 5 consulate locations."
+                  ]
+                },
+                {
+                  "id": 2,
+                  "slug": "indo-us-critical-tech-semiconductor-accord",
+                  "title": "Indo-U.S. Critical Tech & Semiconductor Accord",
+                  "description": "Strengthening bilateral supply-chain resilience, AI fellowships, and clean energy compacts between both nations.",
+                  "author": "Consular Economic Desk",
+                  "category": "Economy",
+                  "dateDay": "25",
+                  "dateMonth": "OCT",
+                  "year": "2026",
+                  "readTime": "6 min read",
+                  "image": "/about3.webp",
+                  "content": [
+                    "Senior trade emissaries and sovereign economic ministers have formally inked a milestone bilateral technological pact to fortify resilient microelectronics manufacturing corridors and high-compute AI architectures.",
+                    "The bilateral initiative outlines reciprocal technology licensing standards, streamlined consular mobility protocols for advanced engineering personnel, and dedicated joint research labs across sovereign research institutes.",
+                    "This strategic agreement solidifies long-term supply-chain independence and sovereign data protection standards adhering to international bilateral treaties."
+                  ],
+                  "bulletPoints": [
+                    "Fast-tracked visa processing channels for semiconductor specialists.",
+                    "Joint sovereign technology verification frameworks.",
+                    "Multilateral investments into trusted zero-trust network infrastructure."
+                  ]
+                },
+                {
+                  "id": 3,
+                  "slug": "consular-travel-advisory-digital-gate-directives",
+                  "title": "Consular Travel Advisory & Digital Gate Directives",
+                  "description": "Crucial instructions on biometric verification, valid travel deeds, and embassy security screening protocols.",
+                  "author": "Security & Regional Affairs",
+                  "category": "Advisories",
+                  "dateDay": "28",
+                  "dateMonth": "OCT",
+                  "year": "2026",
+                  "readTime": "3 min read",
+                  "image": "/visa2.webp",
+                  "content": [
+                    "The regional security office has updated mandatory entry screening standards for all visitors entering chancery and consulate compounds. The protocol ensures seamless citizen processing while maintaining inviolable sovereign security boundaries.",
+                    "Applicants must present printed digital DS-160 appointment confirmation receipts, valid sovereign travel passports with at least six months of residual validity, and compliant biometric identification documents.",
+                    "All electronic equipment, storage media, and large baggage remain strictly prohibited inside sovereign consular waiting rooms."
+                  ],
+                  "bulletPoints": [
+                    "Arrive strictly 15 minutes prior to scheduled appointment window.",
+                    "Electronic items must be surrendered at exterior enclave storage cells.",
+                    "Original physical civil documents must accompany all digital filings."
+                  ]
+                },
+                {
+                  "id": 4,
+                  "slug": "stem-academic-exchange-2027-fellowships",
+                  "title": "STEM Academic Exchange: 2027 Fellowships Open",
+                  "description": "Full scholarship grants and streamlined J-1 exchange visitor processing launched for doctoral researchers.",
+                  "author": "Education & Cultural Wing",
+                  "category": "Education",
+                  "dateDay": "02",
+                  "dateMonth": "NOV",
+                  "year": "2026",
+                  "readTime": "5 min read",
+                  "image": "/service4.webp",
+                  "content": [
+                    "The Cultural and Academic Affairs Wing announces the open call for the 2027 Bilateral STEM Fellowship Grants, intended for doctoral researchers specializing in quantum computation, aerospace materials, and sustainable energy.",
+                    "Recipients will receive full institutional stipends, diplomatic travel clearances, and expedited J-1 scholar exchange certification.",
+                    "Applications undergo rigorous merit adjudication by a joint panel of sovereign university envoys and state department officials."
+                  ],
+                  "bulletPoints": [
+                    "Full coverage of tuition, institutional research grants, and travel.",
+                    "Dedicated expedited consular visa clearance channel.",
+                    "Direct academic mentorship under leading bilateral university departments."
+                  ]
+                },
+                {
+                  "id": 5,
+                  "slug": "expedited-ds-82-passport-renewal-mail-in-pilot",
+                  "title": "Expedited DS-82 Passport Renewal Mail-In Pilot",
+                  "description": "Adult citizens can now renew 10-year official passports remotely without visiting physical consular gates.",
+                  "author": "American Citizen Services",
+                  "category": "Services",
+                  "dateDay": "08",
+                  "dateMonth": "NOV",
+                  "year": "2026",
+                  "readTime": "3 min read",
+                  "image": "/hero3.webp",
+                  "content": [
+                    "Under new digital modernization directives, adult citizens whose 10-year passports expired within the last five years may now submit DS-82 renewal dossiers via verified consular express courier, bypassing in-person interview lines.",
+                    "The remote service utilizes direct electronic fee settlements via international payment gateways, tracking document transit at each phase of production.",
+                    "Turnaround periods have been shortened to 10-15 business days, with doorstep return of invalidated and newly issued sovereign travel books."
+                  ],
+                  "bulletPoints": [
+                    "Zero requirement for in-person chancery appointment.",
+                    "Direct online payment verification portal.",
+                    "Secure sovereign courier dispatch with end-to-end barcode tracking."
+                  ]
+                },
+                {
+                  "id": 6,
+                  "slug": "maritime-security-defense-dialogue-new-delhi",
+                  "title": "Maritime Security & Defense Dialogue in New Delhi",
+                  "description": "High-level bilateral envoys meet at Chancery to expand joint naval exercises and sovereign communication safety.",
+                  "author": "Defense Attaché Office",
+                  "category": "Defense",
+                  "dateDay": "12",
+                  "dateMonth": "NOV",
+                  "year": "2026",
+                  "readTime": "5 min read",
+                  "image": "/about3.webp",
+                  "content": [
+                    "Senior naval flag officers, defense attachés, and sovereign strategic advisors convened at the Chancery to finalize the operational parameters of next quarter's joint maritime patrol maneuvers.",
+                    "The strategic dialogue centered on communication interoperability, search-and-rescue crisis logistics, and sovereign open-sea navigation security throughout international sea lines of communication.",
+                    "The joint committee affirmed their mutual commitment to a stable, transparent, and sovereign maritime order governed by international legal agreements."
+                  ],
+                  "bulletPoints": [
+                    "Joint coordination protocols for humanitarian assistance and disaster relief.",
+                    "Standardization of encrypted naval operational frequencies.",
+                    "Scheduled deployment of reciprocal defense observer detachments."
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        "FaqsPage": {
+          "variants": {
+            "DiplomaticFaqsPage1": {
+              "banner": {
+                "title": "Frequently Asked Questions",
+                "bgImage": "/hero3.webp",
+                "breadcrumbs": [{ "label": "FAQs" }]
+              },
+              "searchPlaceholder": "Search frequently asked questions...",
+              "emptyStateText": "No answers matched your query. Try another keyword.",
+              "helpNotice": {
+                "text": "Have an urgent question regarding an upcoming sovereign visa slot or appointment?",
+                "buttonLabel": "Contact Consular Desk",
+                "buttonHref": "/contact"
+              },
+              "faqs": [
+                {
+                  "id": 1,
+                  "question": "What electronic devices are strictly prohibited inside the consular enclave?",
+                  "answer": "Smartphones, laptops, iPads, digital recording gadgets, cameras, and wearable fitness trackers with connectivity are not permitted beyond Security Gate 1. Secure token lockers are available at the outer checkpoint."
+                },
+                {
+                  "id": 2,
+                  "question": "How far in advance should I arrive before my scheduled interview slot?",
+                  "answer": "You should arrive no earlier than 15 minutes before your confirmed appointment time. Early entry is restricted by perimeter security to maintain crowd protocols."
+                },
+                {
+                  "id": 3,
+                  "question": "Does my passport need six months of validity beyond my intended travel date?",
+                  "answer": "Yes. All foreign travelers must hold a sovereign passport valid for at least six months beyond their departure date, unless exempted under bilateral country agreements."
+                },
+                {
+                  "id": 4,
+                  "question": "What is the standard processing turnaround for expedited 10-year passport renewals?",
+                  "answer": "Standard expedited DS-82 renewals typically take 2 to 3 weeks. Urgent emergency temporary passports can be cleared within 24 to 48 hours for verified departures."
+                },
+                {
+                  "id": 5,
+                  "question": "Can third parties or immigration attorneys accompany me to the consular window?",
+                  "answer": "In general, only the principal applicant and approved legal guardians of minors or special-needs individuals are permitted inside the sovereign adjudication hall."
+                },
+                {
+                  "id": 6,
+                  "question": "What fees and payment modes are accepted at the consular cashier window?",
+                  "answer": "We accept primary international credit cards, demand drafts drawn in favor of the diplomatic mission, and exact localized cash currency according to official daily exchange rates."
+                },
+                {
+                  "id": 7,
+                  "question": "How do I transmit a Consular Report of Birth Abroad (CRBA) for my newborn?",
+                  "answer": "Submit the online eCRBA application through the state portal, upload supporting birth certificates and parental proof of citizenship, and attend the scheduled verification appointment."
+                },
+                {
+                  "id": 8,
+                  "question": "Are interpreter and translation services provided during visa interviews?",
+                  "answer": "Consular officers conduct interviews in English and official regional state languages. External sworn translators are accommodated for specialized regional dialects."
+                },
+                {
+                  "id": 9,
+                  "question": "How do I request an emergency non-immigrant expedite appointment?",
+                  "answer": "Schedule the first available standard appointment slot, then file an online expedite request citing urgent medical emergencies, academic start dates, or unexpected business crises."
+                },
+                {
+                  "id": 10,
+                  "question": "What assistance is provided to citizens facing overseas legal or medical emergencies?",
+                  "answer": "The 24/7 Consular Emergency Taskforce coordinates hospital visits, liaison with local judicial authorities, authorized fund transfers, and issuance of one-way repatriation travel deeds."
+                }
+              ]
+            }
+          }
+        },
+        "ContactPage": {
+          "variants": {
+            "DiplomaticContactPage1": {
+              "banner": {
+                "title": "Contact Chancery & Consular Wing",
+                "description": "Official correspondence desk, diplomatic inquiries, and consular gate navigation.",
+                "bgImage": "/hero2.webp",
+                "breadcrumbs": [{ "label": "Contact Us" }]
+              },
+              "formSection": {
+                "badge": "OFFICIAL CORRESPONDENCE",
+                "title": "Send Us an Inquiry",
+                "description": "Submit verified consular queries, trade representation proposals, or citizen assistance requests.",
+                "departmentSubjects": [
+                  { "label": "Visa & Immigration Clearance", "value": "Visa Inquiry" },
+                  { "label": "American Citizen Services (ACS)", "value": "American Citizen Services" },
+                  { "label": "Commercial / Trade Pact Inquiry", "value": "Economic & Trade Accord" },
+                  { "label": "Press & Official Communications", "value": "Media & Press" },
+                  { "label": "General Diplomatic Query", "value": "General Diplomatic" }
+                ],
+                "submitBtnText": "DISPATCH DIPLOMATIC INQUIRY",
+                "submittingBtnText": "TRANSMITTING INQUIRY...",
+                "thankYou": {
+                  "badge": "DISPATCH CONFIRMED",
+                  "titlePrefix": "Thank You",
+                  "messageTemplate": "Your diplomatic query regarding {subject} has been received by the Chancery consular desk. An official response token will be transmitted to {email} within 24–48 working hours.",
+                  "resetBtnText": "SEND ANOTHER INQUIRY"
+                }
+              },
+              "chanceryCard": {
+                "image": "/visa1.webp",
+                "badge": "U.S. EMBASSY CHANCERY",
+                "title": "Shantipath Diplomatic Enclave",
+                "address": "Chanakyapuri, New Delhi, India 110021"
+              },
+              "quickAccess": {
+                "gateAccess": "Public Consular Access: Gate No. 1",
+                "phone": "+1 000 000 000",
+                "email": "support@xyz.com"
+              },
+              "mapSection": {
+                "title": "Official Diplomatic Enclave Location",
+                "subtitle":"100 S Main Street, New York, NY 10001",
+                "embedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.25280012224!2d-74.11976374026851!3d40.69766374859258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+              }
+            }
+          }
+        },
+        "AppointmentPage": {
+          "variants": {
+            "DiplomaticAppointmentPage1": {
+              "banner": {
+                "title": "Consular Appointment Booking",
+                "description": "Schedule your verified entry clearance, biometric capture, and sovereign consular interview.",
+                "bgImage": "/service5.webp",
+                "breadcrumbs": [{ "label": "Appointment" }]
+              },
+              "headerStrip": {
+                "badge": "Consular Clearance Gate",
+                "title": "Schedule Your Consular Dossier Appointment",
+                "protocolTag": "Vienna Convention Protocol Compliant"
+              },
+              "services": [
+                "Non-Immigrant Visa Interview (B1/B2, F-1, H-1B)",
+                "Official DS-82 / DS-11 Passport Renewal",
+                "Consular Report of Birth Abroad (CRBA)",
+                "Hague Apostille & Civil Document Attestation",
+                "Diplomatic & Official Protocol Verification",
+                "Emergency Citizen Repatriation & Travel Dossier"
+              ],
+              "timeSlots": [
+                "08:30 AM - 09:15 AM",
+                "09:30 AM - 10:15 AM",
+                "10:30 AM - 11:15 AM",
+                "11:30 AM - 12:15 PM",
+                "02:00 PM - 02:45 PM",
+                "03:00 PM - 03:45 PM"
+              ],
+              "enclaveLocations": [
+                "New Delhi - Principal Embassy Chancery (Chanakyapuri)",
+                "Mumbai - Western Consular Enclave (BKC)",
+                "Hyderabad - Southern Consular Mission",
+                "Kolkata - Eastern Consular Mission"
+              ],
+              "noticeText": "Entry requires original valid passport & biometric appointment clearance slip.",
+              "submitBtnText": "Confirm & Book Appointment",
+              "confirmation": {
+                "statusTag": "Appointment Confirmed & Transmitted",
+                "headingPrefix": "Thank You",
+                "description": "Your consular appointment dossier has been authenticated and registered with the sovereign diplomatic mission scheduling system.",
+                "trackingLabel": "Tracking Reference",
+                "securityClearanceLabel": "Security Clearance",
+                "securityClearanceValue": "GATE PASS READY",
+                "applicantLabel": "Applicant",
+                "passportLabel": "Passport / ID",
+                "serviceLabel": "Consular Service",
+                "appearanceSlotLabel": "Appearance Slot",
+                "enclaveLabel": "Enclave Venue",
+                "noteTemplate": "A confirmation dossier and gate entry barcode have been dispatched to {email}. Please present this document at security screening.",
+                "printBtnText": "Print Clearance Pass",
+                "returnHomeBtnText": "Return to Home",
+                "returnHomeHref": "/"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
