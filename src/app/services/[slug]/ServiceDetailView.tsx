@@ -7,7 +7,6 @@ import PageBanner from "@/components/PageBanner";
 import websiteData from "@/data/websiteData.json";
 import {
   Clock,
-  DollarSign,
   Building2,
   ShieldCheck,
   Check,
@@ -125,7 +124,6 @@ export default function ServiceDetailView({ service, allServices, slug }: Servic
   const config = (websiteData as any).categories.DiplomaticMission.sections.ServiceDetailPage.variants.DiplomaticServiceDetail1;
 
   const snapshot = [
-    { icon: DollarSign, label: config.labels.fee, value: service.fee, tone: "text-emerald-700", ring: "from-emerald-100 to-emerald-50 text-emerald-600" },
     { icon: Clock, label: config.labels.time, value: service.time, tone: "text-sky-700", ring: "from-sky-100 to-sky-50 text-sky-600" },
     { icon: Building2, label: config.labels.enclave, value: service.enclave, tone: "text-slate-800", ring: "from-amber-100 to-amber-50 text-amber-600" },
   ];

@@ -18,7 +18,6 @@ import {
   Calendar,
   Check,
   Clock,
-  DollarSign,
   FileText,
   Plane,
   ShieldCheck,
@@ -214,7 +213,6 @@ export default function VisaDetailView({ visa, slug }: { visa: any; slug: string
   const otherVisas = ALL_VISAS.filter((v: any) => v.slug !== slug).slice(0, 3);
 
   const facts = [
-    { icon: DollarSign, label: visaDetailConfig.metrics.feeLabel, value: visa.fee, ring: "from-amber-100 to-amber-50 text-amber-600" },
     { icon: Clock, label: visaDetailConfig.metrics.validityLabel, value: visa.validity, ring: "from-sky-100 to-sky-50 text-sky-600" },
     { icon: ShieldCheck, label: visaDetailConfig.metrics.processingTimeLabel, value: visa.processingTime, ring: "from-emerald-100 to-emerald-50 text-emerald-600" },
   ];
@@ -375,7 +373,7 @@ export default function VisaDetailView({ visa, slug }: { visa: any; slug: string
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.3 }}
-            className="mt-10 sm:mt-12 grid grid-cols-1 sm:grid-cols-3"
+            className="mt-10 sm:mt-12 grid grid-cols-1 sm:grid-cols-2"
           >
             {facts.map((f, i) => {
               const Icon = f.icon;
@@ -386,7 +384,7 @@ export default function VisaDetailView({ visa, slug }: { visa: any; slug: string
                   custom={i}
                   className={`group flex items-center gap-4 py-4 sm:py-2 border-sky-200 ${
                     i > 0 ? "border-t sm:border-t-0 sm:border-l sm:pl-6" : ""
-                  } ${i < 2 ? "sm:pr-6" : ""}`}
+                  } ${i < 1 ? "sm:pr-6" : ""}`}
                 >
                   <span
                     className={`flex items-center justify-center w-11 h-11 rounded-full shrink-0 bg-gradient-to-br ${f.ring} transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-6`}

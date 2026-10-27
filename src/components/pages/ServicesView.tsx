@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { AnimatePresence, motion, useReducedMotion, type Variants } from "framer-motion";
-import { ArrowUpRight, Clock, ShieldCheck, ArrowRight } from "lucide-react";
+import { ArrowUpRight, Clock, ArrowRight } from "lucide-react";
 import websiteData from "@/data/websiteData.json";
 
 /* ---------- Animated background ---------- */
@@ -281,11 +281,6 @@ export default function ServicesView() {
                 >
                   <p className="font-serif text-base sm:text-lg font-bold text-slate-800 truncate">{activeService.enclave}</p>
                   <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-5 text-xs sm:text-sm font-semibold">
-                    <span className="flex items-center gap-1.5 text-emerald-700">
-                      <ShieldCheck className="w-4 h-4 text-amber-500" />
-                      {activeService.fee}
-                    </span>
-                    <span className="h-4 w-px bg-sky-200 hidden sm:block" />
                     <span className="flex items-center gap-1.5 text-sky-700">
                       <Clock className="w-4 h-4" />
                       {activeService.time}

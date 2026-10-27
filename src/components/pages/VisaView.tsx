@@ -314,8 +314,6 @@ export default function VisaView() {
                 </motion.h4>
 
                 <motion.div variants={detailChild} className="flex flex-wrap items-center gap-x-3 sm:gap-x-4 gap-y-1.5 text-xs sm:text-sm font-semibold">
-                  <span className="text-amber-600">{visa.fee}</span>
-                  <span className="h-3 w-px bg-sky-200" />
                   <span className="text-sky-700">{visa.tag}</span>
                   <span className="h-3 w-px bg-sky-200" />
                   <span className="flex items-center gap-1.5 text-slate-600">

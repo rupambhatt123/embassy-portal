@@ -11,7 +11,6 @@ import {
   TrendingUp,
   ArrowRight,
   Clock,
-  DollarSign,
   ShieldCheck,
 } from "lucide-react";
 import PageBanner from "@/components/PageBanner";
@@ -319,11 +318,6 @@ export default function VisaPage() {
                         custom={4}
                         className="mt-4 flex flex-wrap items-center justify-center sm:justify-start gap-x-5 gap-y-2 text-xs sm:text-sm font-semibold"
                       >
-                        <span className="flex items-center gap-1.5 text-emerald-700">
-                          <DollarSign className="w-4 h-4" />
-                          {item.fee}
-                        </span>
-                        <span className="h-4 w-px bg-sky-200 hidden sm:block" />
                         <span className="flex items-center gap-1.5 text-slate-600">
                           <Clock className="w-4 h-4 text-sky-500" />
                           {item.validity}

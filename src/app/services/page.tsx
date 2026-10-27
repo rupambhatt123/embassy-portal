@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { motion, useReducedMotion, type Variants } from "framer-motion";
-import { ArrowRight, Clock, DollarSign, Sparkles } from "lucide-react";
+import { ArrowRight, Clock, Sparkles } from "lucide-react";
 import PageBanner from "@/components/PageBanner";
 import websiteData from "@/data/websiteData.json";
 
@@ -125,7 +125,7 @@ const BLOBS = [
 export default function ServicesPage() {
   const reduce = !!useReducedMotion();
 
-  // 100% Strict JSON Data Connection[cite: 14]
+  // 100% Strict JSON Data Connection
   const data = (websiteData as any).categories.DiplomaticMission.sections.ServicesPage.variants.DiplomaticServicesPage1;
   const fullServices = (websiteData as any).categories.DiplomaticMission.sections.Services.variants.DiplomaticServices1.items;
 
@@ -187,7 +187,7 @@ export default function ServicesPage() {
             </h2>
           </motion.div>
 
-          {/* ================= MOBILE CAROUSEL (Ek card front me baaki dots se slide) ================= */}
+          {/* ================= MOBILE CAROUSEL ================= */}
           <div className="mt-10 lg:hidden">
             <div className="relative bg-white/90 backdrop-blur-md rounded-2xl p-5 shadow-xl border border-sky-100">
               <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl bg-slate-900 mb-5 shadow-md">
@@ -206,11 +206,7 @@ export default function ServicesPage() {
               <p className="text-xs font-medium text-slate-500 mt-1">{activeItem.enclave}</p>
               <p className="text-sm text-slate-600 leading-relaxed mt-3">{activeItem.description}</p>
 
-              <div className="mt-4 flex items-center justify-between text-xs font-semibold pt-4 border-t border-slate-100">
-                <span className="flex items-center gap-1.5 text-emerald-700">
-                  <DollarSign className="w-3.5 h-3.5" />
-                  {activeItem.fee}
-                </span>
+              <div className="mt-4 flex items-center justify-end text-xs font-semibold pt-4 border-t border-slate-100">
                 <span className="flex items-center gap-1.5 text-sky-700">
                   <Clock className="w-3.5 h-3.5" />
                   {activeItem.time}
@@ -243,7 +239,7 @@ export default function ServicesPage() {
             </div>
           </div>
 
-          {/* ================= DESKTOP EDITORIAL ROWS (Hidden on mobile) ================= */}
+          {/* ================= DESKTOP EDITORIAL ROWS ================= */}
           <div className="mt-14 hidden lg:block">
             {fullServices.map((item: any, idx: number) => {
               const reversed = idx % 2 === 1;
@@ -341,13 +337,6 @@ export default function ServicesPage() {
                       </motion.div>
 
                       <motion.div variants={tv} custom={4} className="mt-5 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm font-semibold">
-                        <span className="flex items-center gap-2 text-emerald-700">
-                          <span className="flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-br from-emerald-100 to-emerald-50 text-emerald-600 transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-6">
-                            <DollarSign className="w-4 h-4" />
-                          </span>
-                          {item.fee}
-                        </span>
-                        <span className="h-5 w-px bg-sky-200 hidden sm:block" />
                         <span className="flex items-center gap-2 text-sky-700">
                           <span className="flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-br from-sky-100 to-sky-50 text-sky-600 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
                             <Clock className="w-4 h-4" />
