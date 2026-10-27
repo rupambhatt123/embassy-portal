@@ -104,7 +104,7 @@
         "Header": {
           "variants": {
             "DiplomaticHeader1": {
-              "logo": "/logo.webp",
+              "logo": "/logo.png",
               "navLinks": [
                 { "title": "HOME", "path": "/" },
                 { "title": "ABOUT US", "path": "/about" },
@@ -647,7 +647,7 @@
           "variants": {
             "DiplomaticFooter1": {
               "logo": {
-                "src": "/logo.webp",
+                "src": "/logo.png",
                 "alt": "Global Diplomatic Mission"
               },
               "aboutText": "Official sovereign representation facilitating diplomatic clearances, visa adjudications, and bilateral accords.",
