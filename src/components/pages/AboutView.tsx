@@ -297,7 +297,7 @@ export default function AboutView() {
             })}
           </div>
 
-          {/* CTA */}
+          {/* CTA Button */}
           <motion.div variants={fadeUp} custom={7} className="mt-6 sm:mt-8">
             <Link
               href={ctaButton.href}

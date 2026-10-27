@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence, type Variants } from "framer-motion";
-import { Plus, Search, HelpCircle, X, ShieldAlert } from "lucide-react";
+import { Plus, HelpCircle, ShieldAlert } from "lucide-react";
 import PageBanner from "@/components/PageBanner";
 import websiteData from "@/data/websiteData.json";
 
@@ -122,18 +122,12 @@ export default function FaqsPage() {
   const helpNotice = data.helpNotice;
 
   const [openId, setOpenId] = useState<number | null>(null);
-  const [searchQuery, setSearchQuery] = useState("");
 
   const toggle = (id: number) => setOpenId((prev) => (prev === id ? null : id));
 
-  const filteredFaqs = faqItems.filter((f) => {
-    const q = searchQuery.toLowerCase();
-    return f.question.toLowerCase().includes(q) || f.answer.toLowerCase().includes(q);
-  });
-
-  const midpoint = Math.ceil(filteredFaqs.length / 2);
-  const leftColumn = filteredFaqs.slice(0, midpoint);
-  const rightColumn = filteredFaqs.slice(midpoint);
+  const midpoint = Math.ceil(faqItems.length / 2);
+  const leftColumn = faqItems.slice(0, midpoint);
+  const rightColumn = faqItems.slice(midpoint);
 
   return (
     <main className="w-full min-h-screen bg-gradient-to-b from-[#eaf4fc]/40 via-white to-[#fffaf0]/40 text-slate-900 font-sans pb-24">
@@ -146,31 +140,8 @@ export default function FaqsPage() {
 
       <div className="max-w-[1350px] mx-auto px-5 sm:px-8 lg:px-12 pt-8 space-y-8">
         
-        {/* Search Control */}
-        <div className="max-w-2xl mx-auto">
-          <div className="relative group">
-            <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-sky-600 group-focus-within:text-amber-500 transition-colors" />
-            <input
-              type="text"
-              placeholder={data.searchPlaceholder}
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-11 pr-12 py-3 bg-white border-2 border-sky-200 rounded-2xl outline-none focus:border-amber-500 transition-all text-sm text-slate-800 placeholder-slate-400 shadow-xs"
-            />
-            {searchQuery && (
-              <button
-                onClick={() => setSearchQuery("")}
-                aria-label="Clear search"
-                className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 hover:text-amber-600 transition-colors cursor-pointer"
-              >
-                <X className="w-4 h-4" />
-              </button>
-            )}
-          </div>
-        </div>
-
         {/* 2-Column Accordion Layout */}
-        {filteredFaqs.length > 0 ? (
+        {faqItems.length > 0 ? (
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12 items-start">
             <motion.ul initial="hidden" animate="show" className="space-y-1">
               {leftColumn.map((item, i) => (

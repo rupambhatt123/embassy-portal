@@ -440,26 +440,6 @@ export default function AboutPage() {
             })}
           </motion.div>
 
-          {/* Bottom Action Strip */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left"
-          >
-            <p className="text-xs sm:text-sm text-slate-400">
-              {treaty.bottomBar.text}
-            </p>
-            <Link
-              href={treaty.bottomBar.buttonHref}
-              className="inline-flex items-center gap-2.5 px-6 py-2.5 rounded-full bg-gradient-to-r from-[#d4af37] to-[#e2a32d] text-[#07182b] text-xs font-bold uppercase tracking-wider shadow-md hover:scale-105 transition-all shrink-0"
-            >
-              <span>{treaty.bottomBar.buttonLabel}</span>
-              <ArrowRight className="w-3.5 h-3.5" />
-            </Link>
-          </motion.div>
-
         </div>
       </section>
     </main>
