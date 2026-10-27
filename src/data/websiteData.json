@@ -658,22 +658,22 @@
               ],
               "servicesHeading": "Our Services",
               "servicesLinks": [
-                { "name": "Passport Issuance & Renewal", "href": "/#services" },
-                { "name": "Visa Processing & Clearance", "href": "/visas" },
-                { "name": "Consular Notarization & Legalization", "href": "/#services" },
-                { "name": "Emergency Citizen Repatriation", "href": "/#services" },
-                { "name": "Civil Document Attestation", "href": "/#services" },
-                { "name": "Diplomatic & Official Protocol", "href": "/#services" }
-              ],
+  { "name": "Passport Issuance & Renewal", "href": "/services/passport-renewals" },
+  { "name": "Consular Report of Birth Abroad (CRBA)", "href": "/services/birth-abroad-crba" },
+  { "name": "Hague Apostille & Notarials", "href": "/services/legal-notarials-apostille" },
+  { "name": "Emergency Crisis Desk", "href": "/services/emergency-crisis-desk" },
+  { "name": "Emergency Temporary Passports", "href": "/services/emergency-temporary-passports" },
+  { "name": "Corporate Attestations", "href": "/services/corporate-attestations" }
+],
               "quickNavHeading": "Quick Navigation",
-              "quickNavLinks": [
-                { "name": "About Us", "href": "/#about" },
-                { "name": "Visa Information", "href": "/visas" },
-                { "name": "Blogs", "href": "/blogs" },
-                { "name": "Embassy Staff", "href": "/#staff" },
-                { "name": "Contact Us", "href": "/#contact" },
-                { "name": "FAQs", "href": "/#faqs" }
-              ],
+             "quickNavLinks": [
+  { "name": "About Us", "href": "/about" },
+  { "name": "Visa Information", "href": "/visas" },
+  { "name": "Blogs", "href": "/blogs" },
+  { "name": "Embassy Staff", "href": "/staff" },
+  { "name": "Contact Us", "href": "/contact" },
+  { "name": "FAQs", "href": "/faqs" }
+],
               "contactHeading": "Consular Desk",
               "contactDetails": {
                 "email": {
