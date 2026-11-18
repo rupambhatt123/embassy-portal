@@ -130,7 +130,7 @@ export default function StaffPage() {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.5 }}
-            className="mt-12 text-center max-w-3xl mx-auto"
+            className="mt-12 text-center max-w-3xl mx-auto px-2"
           >
             <motion.div variants={fadeUp} custom={-2} className="flex items-center justify-center gap-3 mb-3">
               <motion.span
@@ -144,20 +144,20 @@ export default function StaffPage() {
               />
             </motion.div>
 
-            <h2 className="font-serif font-bold text-slate-800 tracking-tight leading-[1.1] text-3xl sm:text-4xl lg:text-5xl">
+            <h2 className="font-serif font-bold text-slate-800 tracking-tight leading-[1.2] text-3xl sm:text-4xl lg:text-5xl">
               {headingWords.map((w: string, i: number) => (
-                <span key={w + i} className="inline-block overflow-hidden align-bottom pr-[0.25em] pb-[0.1em]">
+                <span key={w + i} className="inline-block overflow-hidden align-bottom pr-[0.25em] pb-[0.08em]">
                   <motion.span variants={wordVariant} custom={i} className="inline-block">
                     {w}
                   </motion.span>
                 </span>
               ))}
-              <span className="block">
+              <span className="block pt-1">
                 {highlightWords.map((w: string, i: number) => (
-                  <span key={w + i} className="inline-block overflow-hidden align-bottom pr-[0.25em] pb-[0.1em]">
+                  <span key={w + i} className="inline-block overflow-hidden align-bottom pr-[0.35em] pb-[0.15em] mx-[0.05em]">
                     <motion.span variants={wordVariant} custom={i + headingWords.length} className="inline-block">
                       <motion.span
-                        className="inline-block bg-clip-text text-transparent italic font-medium bg-gradient-to-r from-amber-600 via-yellow-400 to-amber-600"
+                        className="inline-block bg-clip-text text-transparent italic font-medium bg-gradient-to-r from-amber-600 via-yellow-400 to-amber-600 px-1"
                         style={{ backgroundSize: "200% 100%" }}
                         animate={reduce ? undefined : { backgroundPosition: ["0% 50%", "200% 50%"] }}
                         transition={{ duration: 6, repeat: Infinity, ease: "linear" }}

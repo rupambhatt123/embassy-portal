@@ -8,14 +8,8 @@ import websiteData from "@/data/websiteData.json";
 
 export default function Navbar() {
   const pathname = usePathname();
-  const [clickedPath, setClickedPath] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-
-  // Reset clickedPath when the route fully changes
-  useEffect(() => {
-    setClickedPath(null);
-  }, [pathname]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,8 +25,7 @@ export default function Navbar() {
   const navLinks = headerData?.navLinks || [];
   const ctaButton = headerData?.ctaButton || { text: "BOOK APPOINTMENT", path: "/appointment" };
 
-  // Use clickedPath immediately on click, fallback to pathname
-  const activeRoute = clickedPath !== null ? clickedPath : pathname;
+  const activeRoute = pathname;
 
   return (
     <header 
@@ -44,12 +37,12 @@ export default function Navbar() {
     >
       <div className="max-w-[1700px] mx-auto px-4 sm:px-8 lg:px-12 h-full flex items-center justify-between">
         
-        {/* Left Side: Logo (Large on Desktop, Compact on Phone) */}
-        <Link href="/" onClick={() => setClickedPath("/")} className="h-full flex items-center group shrink-0 py-1">
+        {/* Left Side Logo: Left-aligned in mobile & desktop, matched footer size */}
+        <Link href="/" prefetch={true} className="h-full flex items-center justify-start group shrink-0 py-1">
           <img
             src="/logo.png"
             alt="Global Diplomatic Mission"
-            className="h-[90%] sm:h-[105%] w-auto max-w-[240px] sm:max-w-[480px] md:max-w-[640px] xl:max-w-[800px] object-contain drop-shadow-2xl transition-transform duration-200 group-hover:scale-105"
+            className="h-14 sm:h-18 lg:h-20 w-auto object-contain drop-shadow-2xl transition-transform duration-200 group-hover:scale-105"
           />
         </Link>
 
@@ -61,7 +54,7 @@ export default function Navbar() {
               <Link
                 key={`${link.title}-${index}`}
                 href={link.path}
-                onClick={() => setClickedPath(link.path)}
+                prefetch={true}
                 className={`px-4 py-1.5 rounded-full text-[14px] font-black tracking-wider uppercase transition-all ${
                   isActive ? "bg-[#d4af37] text-[#07182b]" : "text-white hover:text-[#d4af37] hover:bg-white/10"
                 }`}
@@ -76,7 +69,7 @@ export default function Navbar() {
         <div className="flex items-center gap-3 shrink-0">
           <Link
             href={ctaButton.path || "/appointment"}
-            onClick={() => setClickedPath(ctaButton.path || "/appointment")}
+            prefetch={true}
             className="hidden sm:inline-flex items-center gap-2.5 px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#d4af37] via-[#e2a32d] to-[#d4af37] text-[#07182b] font-black text-xs sm:text-sm uppercase tracking-wider shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 shrink-0"
           >
             <Calendar className="w-4 h-4 text-[#07182b] stroke-[2.5]" />
@@ -103,10 +96,8 @@ export default function Navbar() {
                 <Link
                   key={`mob-${link.title}-${index}`}
                   href={link.path}
-                  onClick={() => {
-                    setClickedPath(link.path);
-                    setIsOpen(false);
-                  }}
+                  prefetch={true}
+                  onClick={() => setIsOpen(false)}
                   className={`text-sm font-black tracking-wider uppercase py-3 px-4 rounded-xl transition-colors ${
                     isActive 
                       ? "bg-[#d4af37] text-[#07182b]" 
@@ -121,10 +112,8 @@ export default function Navbar() {
             <div className="pt-4 border-t border-white/10 sm:hidden">
               <Link
                 href={ctaButton.path || "/appointment"}
-                onClick={() => {
-                  setClickedPath(ctaButton.path || "/appointment");
-                  setIsOpen(false);
-                }}
+                prefetch={true}
+                onClick={() => setIsOpen(false)}
                 className="flex items-center justify-center gap-2.5 w-full rounded-xl bg-gradient-to-r from-[#d4af37] via-[#e2a32d] to-[#d4af37] py-3 text-xs font-black text-[#07182b] uppercase tracking-wider shadow-lg"
               >
                 <Calendar className="w-4 h-4 stroke-[2.5]" />

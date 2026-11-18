@@ -67,7 +67,7 @@ function RevealWords({
           <motion.span variants={wordVariant} custom={start + i} className="inline-block">
             {gold ? (
               <motion.span
-                className="inline-block bg-clip-text text-transparent italic font-medium bg-gradient-to-r from-amber-600 via-yellow-400 to-amber-600"
+                className="inline-block bg-clip-text text-transparent italic font-medium bg-gradient-to-r from-amber-600 via-yellow-400 to-amber-600 px-1"
                 style={{ backgroundSize: "200% 100%" }}
                 animate={reduce ? undefined : { backgroundPosition: ["0% 50%", "200% 50%"] }}
                 transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
@@ -255,11 +255,15 @@ export default function AboutPage() {
                 </span>
               </motion.div>
 
-              <h3 className="font-serif font-bold text-slate-900 tracking-tight leading-[1.1] text-3xl sm:text-4xl lg:text-5xl">
-                <RevealWords text={coop.headingLine1} reduce={reduce} />
-                <span className="block">
-                  <RevealWords text={coop.headingHighlight} start={coop.headingLine1.split(" ").length} gold reduce={reduce} />
-                </span>
+              <h3 className="font-serif font-bold text-slate-900 tracking-tight leading-[1.2] text-3xl sm:text-4xl lg:text-5xl">
+                <div>
+                  <RevealWords text={coop.headingLine1} reduce={reduce} />
+                </div>
+                <div className="mt-1 pb-1">
+                  <span className="inline-block pr-4">
+                    <RevealWords text={coop.headingHighlight} start={coop.headingLine1.split(" ").length} gold reduce={reduce} />
+                  </span>
+                </div>
               </h3>
 
               <motion.div variants={fadeUp} custom={2} className="relative pl-4 max-w-2xl">
@@ -302,7 +306,7 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-              className="lg:col-span-5 flex justify-center"
+              className="lg:col-span-5 flex justify-center pt-4 sm:pt-6"
             >
               <div className="relative w-full max-w-[300px] xs:max-w-[340px] sm:max-w-[390px]">
                 <motion.svg
@@ -319,7 +323,7 @@ export default function AboutPage() {
                 <motion.div
                   animate={reduce ? undefined : { y: [0, -6, 0] }}
                   transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-                  className="relative h-[320px] xs:h-[360px] sm:h-[400px] w-full overflow-hidden rounded-t-[999px] rounded-b-[36px] bg-slate-900 ring-4 ring-white shadow-xl"
+                  className="relative h-[320px] xs:h-[360px] sm:h-[400px] w-full overflow-hidden rounded-t-[999px] rounded-b-[36px] bg-slate-900 ring-4 ring-white shadow-xl pt-3 sm:pt-4 px-2"
                 >
                   <motion.img
                     src={coop.image}
@@ -328,7 +332,7 @@ export default function AboutPage() {
                     whileInView={{ scale: 1.05 }}
                     viewport={{ once: true }}
                     transition={{ duration: 2.2, ease: [0.22, 1, 0.36, 1] }}
-                    className="w-full h-full object-cover object-center"
+                    className="w-full h-full object-cover object-top rounded-t-[999px]"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/45 via-transparent to-transparent pointer-events-none" />
                 </motion.div>

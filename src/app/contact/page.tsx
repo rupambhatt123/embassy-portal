@@ -217,7 +217,7 @@ export default function ContactPage() {
   ];
 
   const pillBase =
-    "group/btn relative inline-flex items-center overflow-hidden rounded-full bg-gradient-to-r from-amber-400 via-amber-500 to-yellow-400 text-sm font-bold text-slate-950 shadow-[0_12px_30px_-10px_rgba(217,119,6,0.7)] transition-transform duration-300 hover:scale-[1.03] cursor-pointer disabled:opacity-60 disabled:hover:scale-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sky-600";
+    "group/btn relative inline-flex items-center rounded-full bg-gradient-to-r from-amber-400 via-amber-500 to-yellow-400 text-sm font-bold text-slate-950 shadow-[0_12px_30px_-10px_rgba(217,119,6,0.7)] transition-transform duration-300 hover:scale-[1.03] cursor-pointer disabled:opacity-60 disabled:hover:scale-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sky-600";
 
   return (
     <div className="w-full font-sans pb-16 sm:pb-20 bg-gradient-to-b from-[#f0f9ff] via-white to-[#fffaf0] overflow-x-hidden">
@@ -236,7 +236,7 @@ export default function ContactPage() {
           {/* ================= Form / thank-you + chancery ================= */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
             {/* ---------- Left: form or thank-you ---------- */}
-            <div className="lg:col-span-7 w-full min-w-0 overflow-hidden">
+            <div className="lg:col-span-7 w-full min-w-0 pb-4">
               <AnimatePresence mode="wait">
                 {!submitted ? (
                   <motion.div
@@ -357,9 +357,9 @@ export default function ContactPage() {
                         />
                       </Field>
 
-                      <motion.div variants={fadeUp} className="pt-2">
+                      <motion.div variants={fadeUp} className="pt-2 pb-3">
                         <button type="submit" disabled={loading} className={`${pillBase} w-full sm:w-auto justify-between gap-3 pl-8 pr-2 py-2`}>
-                          <span className="pointer-events-none absolute inset-y-0 -left-1/2 w-1/3 -skew-x-12 bg-white/50 blur-sm transition-transform duration-700 group-hover/btn:translate-x-[450%]" />
+                          <span className="pointer-events-none absolute inset-y-0 -left-1/2 w-1/3 -skew-x-12 bg-white/50 blur-sm transition-transform duration-700 group-hover/btn:translate-x-[450%] rounded-full overflow-hidden" />
                           <span className="relative">{loading ? formSection.submittingBtnText : formSection.submitBtnText}</span>
                           <span className="relative flex items-center justify-center w-10 h-10 rounded-full bg-slate-950 text-amber-300 transition-transform duration-300 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5">
                             {loading ? <RefreshCw className="w-4 h-4 animate-spin" /> : <Send className="w-4 h-4" />}
@@ -602,17 +602,17 @@ export default function ContactPage() {
             </motion.div>
           </div>
 
-          {/* ================= 2. Map ================= */}
+          {/* ================= 2. Map (Converted to fully rectangular box to prevent link/text clipping) ================= */}
           <motion.section
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.15 }}
-            className="w-full overflow-hidden"
+            className="w-full"
           >
             <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
               <div>
                 <motion.h3 variants={fadeUp} custom={0} className="flex items-center gap-3 font-serif font-bold text-slate-800 text-xl sm:text-4xl leading-tight">
-                  <span className="relative flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 shrink-0">
+                  <span className="relative inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 shrink-0">
                     {!reduce && (
                       <motion.span
                         aria-hidden
@@ -621,7 +621,7 @@ export default function ContactPage() {
                         transition={{ duration: 2.2, repeat: Infinity, ease: "easeOut" }}
                       />
                     )}
-                    <span className="relative flex items-center justify-center w-full h-full rounded-full bg-gradient-to-br from-amber-300 to-amber-500 text-slate-950">
+                    <span className="relative z-10 flex items-center justify-center w-full h-full rounded-full bg-gradient-to-br from-amber-300 to-amber-500 text-slate-950">
                       <MapPin className="w-4 sm:w-5 h-4 sm:h-5" />
                     </span>
                   </span>
@@ -651,7 +651,7 @@ export default function ContactPage() {
               }}
               className="relative mt-6"
             >
-              <div className="relative w-full h-[280px] sm:h-[480px] overflow-hidden rounded-[24px] sm:rounded-[44px] bg-slate-100 ring-4 ring-white shadow-[0_30px_60px_-20px_rgba(12,74,110,0.45)]">
+              <div className="relative w-full h-[280px] sm:h-[480px] overflow-hidden rounded-2xl bg-slate-100 ring-4 ring-white shadow-[0_30px_60px_-20px_rgba(12,74,110,0.45)]">
                 <iframe
                   title={mapSection.title}
                   src={mapSection.embedUrl}

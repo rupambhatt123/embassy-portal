@@ -103,27 +103,27 @@ export default function Footer() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  // 100% JSON Integration
+  // 100% Strict JSON Integration (No hardcoded fallback values)
   const footerData =
     (websiteData as any)?.categories?.DiplomaticMission?.sections?.Footer?.variants?.DiplomaticFooter1 || {};
 
-  const logo = footerData?.logo || { src: "/logo.webp", alt: "Global Diplomatic Mission" };
-  const aboutText = footerData?.aboutText || "Official sovereign representation facilitating diplomatic clearances.";
-  const servicesHeading = footerData?.servicesHeading || "Our Services";
-  const servicesLinks = footerData?.servicesLinks || [];
-  const quickNavHeading = footerData?.quickNavHeading || "Quick Navigation";
-  const quickNavLinks = footerData?.quickNavLinks || [];
-  const contactHeading = footerData?.contactHeading || "Consular Desk";
-  const contact = footerData?.contactDetails || {};
-  const legal = footerData?.legal || {};
+  const logo = footerData.logo;
+  const aboutText = footerData.aboutText;
+  const servicesHeading = footerData.servicesHeading;
+  const servicesLinks = footerData.servicesLinks || [];
+  const quickNavHeading = footerData.quickNavHeading;
+  const quickNavLinks = footerData.quickNavLinks || [];
+  const contactHeading = footerData.contactHeading;
+  const contact = footerData.contactDetails || {};
+  const legal = footerData.legal || {};
 
-  const emailAddress = contact?.email?.address || "consular@globaldiplomatic.org";
-  const phoneNumber = contact?.phone?.number || "+1 (800) 555-0199";
+  const emailAddress = contact?.email?.address;
+  const phoneNumber = contact?.phone?.number;
 
   const socials = [
     {
       label: "Instagram",
-      href: footerData?.socialLinks?.[0]?.href || "https://instagram.com",
+      href: footerData?.socialLinks?.[0]?.href,
       bg: "bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7]",
       glow: "hover:shadow-[0_10px_25px_-6px_rgba(238,42,123,0.8)]",
       size: "w-[18px] h-[18px]",
@@ -131,7 +131,7 @@ export default function Footer() {
     },
     {
       label: "Twitter / X",
-      href: footerData?.socialLinks?.[1]?.href || "https://twitter.com",
+      href: footerData?.socialLinks?.[1]?.href,
       bg: "bg-black border border-slate-600",
       glow: "hover:shadow-[0_10px_25px_-6px_rgba(255,255,255,0.35)]",
       size: "w-4 h-4",
@@ -139,7 +139,7 @@ export default function Footer() {
     },
     {
       label: "WhatsApp",
-      href: footerData?.socialLinks?.[2]?.href || "https://whatsapp.com",
+      href: footerData?.socialLinks?.[2]?.href,
       bg: "bg-[#25D366]",
       glow: "hover:shadow-[0_10px_25px_-6px_rgba(37,211,102,0.8)]",
       size: "w-[18px] h-[18px]",
@@ -151,20 +151,20 @@ export default function Footer() {
     {
       icon: Mail,
       primary: emailAddress,
-      href: `mailto:${emailAddress}`,
-      label: contact?.email?.label || "Diplomatic Clearance Query",
+      href: emailAddress ? `mailto:${emailAddress}` : undefined,
+      label: contact?.email?.label,
     },
     {
       icon: Phone,
       primary: phoneNumber,
-      href: `tel:${String(phoneNumber).replace(/[^\d+]/g, "")}`,
-      label: contact?.phone?.label || "24/7 Consular Emergency Line",
+      href: phoneNumber ? `tel:${String(phoneNumber).replace(/[^\d+]/g, "")}` : undefined,
+      label: contact?.phone?.label,
     },
     {
       icon: MapPin,
-      primary: contact?.address?.location || "Chancery Enclave, Diplomatic District",
+      primary: contact?.address?.location,
       href: undefined as string | undefined,
-      label: contact?.address?.label || "Official Consular Premises",
+      label: contact?.address?.label,
     },
   ];
 
@@ -193,18 +193,18 @@ export default function Footer() {
           viewport={{ once: true, amount: 0.15 }}
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-x-10 lg:gap-12"
         >
-          {/* Column 1: Brand */}
+          {/* Column 1: Brand (Left-aligned mobile & desktop logo, matched Navbar size) */}
           <motion.div variants={columnVariants} custom={0} className="flex flex-col items-start space-y-4">
-            <Link href="/" className="inline-flex items-center group py-1">
+            <Link href="/" className="inline-flex items-center group py-2">
               <img
-                src={typeof logo === "string" ? logo : logo.src}
-                alt={typeof logo === "string" ? "Logo" : logo.alt}
-                className="h-12 sm:h-20 lg:h-28 w-auto max-w-[260px] sm:max-w-[480px] object-contain drop-shadow-md"
+                src={typeof logo === "string" ? logo : logo?.src}
+                alt={typeof logo === "string" ? "Logo" : logo?.alt}
+                className="h-14 sm:h-18 lg:h-20 w-auto object-contain drop-shadow-2xl transition-transform duration-200 group-hover:scale-105"
               />
             </Link>
             <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal max-w-sm">{aboutText}</p>
             <div className="flex items-center gap-3 pt-1">
-              {socials.map((s) => (
+              {socials.map((s) => s.href && (
                 <motion.a
                   key={s.label}
                   href={s.href}
@@ -291,7 +291,7 @@ export default function Footer() {
       <div className="relative z-10">
         <div className="max-w-[1700px] mx-auto px-4 sm:px-8 lg:px-12 py-5 sm:py-6 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-[#d4af37]/20 text-center sm:text-left">
           <p className="text-xs sm:text-sm text-slate-300 font-medium">
-            {legal?.copyright || "© 2026 Global Diplomatic Mission & Consular Corp. All rights reserved."}
+            {legal?.copyright}
           </p>
 
           <button

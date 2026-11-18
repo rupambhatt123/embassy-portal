@@ -98,16 +98,16 @@ export default function ServicesView() {
           viewport={{ once: true, amount: 0.5 }}
           className="flex flex-col sm:flex-row sm:items-end justify-between gap-3 mb-6 sm:mb-8"
         >
-          <h2 className="font-serif font-bold tracking-tight text-slate-800 text-3xl sm:text-4xl lg:text-5xl leading-[1.1]">
-            <span className="inline-block overflow-hidden align-bottom pr-[0.2em] sm:pr-[0.25em] pb-[0.1em]">
+          <h2 className="font-serif font-bold tracking-tight text-slate-800 text-3xl sm:text-4xl lg:text-5xl leading-[1.2] py-2">
+            <span className="inline-block align-bottom pr-[0.25em]">
               <motion.span variants={wordVariant} custom={0} className="inline-block">
                 {data.headingLine1}
               </motion.span>
             </span>
-            <span className="inline-block overflow-hidden align-bottom pr-[0.2em] sm:pr-[0.25em] pb-[0.1em]">
+            <span className="inline-block align-bottom pr-[0.4em] mr-2">
               <motion.span variants={wordVariant} custom={1} className="inline-block">
                 <motion.span
-                  className="bg-clip-text text-transparent italic font-medium bg-gradient-to-r from-amber-600 via-yellow-400 to-amber-600"
+                  className="bg-clip-text text-transparent italic font-medium bg-gradient-to-r from-amber-600 via-yellow-400 to-amber-600 pr-2"
                   style={{ backgroundSize: "200% 100%" }}
                   animate={reduce ? undefined : { backgroundPosition: ["0% 50%", "200% 50%"] }}
                   transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
