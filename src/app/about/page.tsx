@@ -63,7 +63,7 @@ function RevealWords({
   return (
     <>
       {text.split(" ").map((w, i) => (
-        <span key={w + i} className="inline-block overflow-hidden align-bottom pr-[0.25em] pb-[0.1em]">
+        <span key={w + i} className="inline-block overflow-hidden align-bottom pr-[0.2em] pb-[0.05em]">
           <motion.span variants={wordVariant} custom={start + i} className="inline-block">
             {gold ? (
               <motion.span
@@ -255,15 +255,13 @@ export default function AboutPage() {
                 </span>
               </motion.div>
 
-              <h3 className="font-serif font-bold text-slate-900 tracking-tight leading-[1.2] text-3xl sm:text-4xl lg:text-5xl">
-                <div>
+              <h3 className="font-serif font-bold text-slate-900 tracking-tight leading-[1.15] text-2xl sm:text-4xl lg:text-5xl">
+                <span className="inline-flex flex-wrap items-baseline gap-x-[0.25em]">
                   <RevealWords text={coop.headingLine1} reduce={reduce} />
-                </div>
-                <div className="mt-1 pb-1">
-                  <span className="inline-block pr-4">
-                    <RevealWords text={coop.headingHighlight} start={coop.headingLine1.split(" ").length} gold reduce={reduce} />
-                  </span>
-                </div>
+                </span>
+                <span className="inline-flex flex-wrap items-baseline gap-x-[0.25em] mt-1">
+                  <RevealWords text={coop.headingHighlight} start={coop.headingLine1.split(" ").length} gold reduce={reduce} />
+                </span>
               </h3>
 
               <motion.div variants={fadeUp} custom={2} className="relative pl-4 max-w-2xl">
@@ -368,18 +366,20 @@ export default function AboutPage() {
             </motion.div>
 
             <h3 className="font-serif font-bold text-white tracking-tight leading-[1.15] text-2xl sm:text-4xl lg:text-5xl">
-              <RevealWords text={treaty.headingLine1} reduce={reduce} />
-              <span className="inline-block overflow-hidden align-bottom pr-[0.22em] pb-[0.08em]">
-                <motion.span variants={wordVariant} custom={2} className="inline-block text-[#d4af37] italic font-medium">
-                  {treaty.headingHighlight1}
-                </motion.span>
+              <span className="inline-flex flex-wrap items-baseline gap-x-[0.2em]">
+                <RevealWords text={treaty.headingLine1} reduce={reduce} />
+                <span className="inline-block overflow-hidden align-bottom pr-[0.2em] pb-[0.05em]">
+                  <motion.span variants={wordVariant} custom={2} className="inline-block text-[#d4af37] italic font-medium">
+                    {treaty.headingHighlight1}
+                  </motion.span>
+                </span>
+                <span className="inline-block overflow-hidden align-bottom pr-[0.2em] pb-[0.05em]">
+                  <motion.span variants={wordVariant} custom={3} className="inline-block text-[#d4af37] italic font-medium">
+                    {treaty.headingHighlight2}
+                  </motion.span>
+                </span>
+                <RevealWords text={treaty.headingLine2} start={4} reduce={reduce} />
               </span>
-              <span className="inline-block overflow-hidden align-bottom pr-[0.22em] pb-[0.08em]">
-                <motion.span variants={wordVariant} custom={3} className="inline-block text-[#d4af37] italic font-medium">
-                  {treaty.headingHighlight2}
-                </motion.span>
-              </span>
-              <RevealWords text={treaty.headingLine2} start={4} reduce={reduce} />
             </h3>
 
             <motion.p variants={fadeUp} custom={3} className="mt-3 text-xs sm:text-sm text-slate-300 leading-relaxed font-normal">

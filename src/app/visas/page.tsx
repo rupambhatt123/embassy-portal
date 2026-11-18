@@ -223,7 +223,7 @@ export default function VisaPage() {
           </motion.div>
 
           {/* ================= Visa list ================= */}
-          <div className="mt-14 grid grid-cols-1 lg:grid-cols-2 gap-x-14 gap-y-4">
+          <div className="mt-14 grid grid-cols-1 lg:grid-cols-2 gap-x-14 gap-y-6">
             {allVisas.map((item: any, idx: number) => {
               const Icon = ICON_MAP[item.icon as keyof typeof ICON_MAP] || Plane;
               return (
@@ -232,9 +232,9 @@ export default function VisaPage() {
                   initial="hidden"
                   whileInView="show"
                   viewport={{ once: true, amount: 0.25 }}
-                  className="group relative py-8"
+                  className="group relative py-8 px-5 sm:px-6 rounded-3xl transition-all duration-500"
                 >
-                  <span className="pointer-events-none absolute inset-0 bg-gradient-to-r from-amber-100/60 via-sky-100/25 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                  <span className="pointer-events-none absolute inset-0 rounded-3xl bg-gradient-to-r from-amber-100/70 via-sky-100/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700 shadow-sm" />
 
                   <div className="relative flex flex-col sm:flex-row items-center sm:items-start gap-6 sm:gap-8">
                     {/* Round photo with link to slug */}

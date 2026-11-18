@@ -104,20 +104,22 @@ export default function BlogsPage() {
               <span className="block h-[2px] w-10 bg-gradient-to-r from-amber-500 to-transparent" />
             </motion.div>
 
-            <h2 className="font-serif font-bold text-slate-800 tracking-tight leading-[1.2] text-3xl sm:text-4xl lg:text-5xl">
-              {headingWords.map((w: string, i: number) => (
-                <span key={w + i} className="inline-block overflow-hidden align-bottom pr-[0.25em] pb-[0.08em]">
-                  <motion.span variants={wordVariant} custom={i} className="inline-block">
-                    {w}
+            <h2 className="font-serif font-bold text-slate-800 tracking-tight leading-[1.15] text-2xl sm:text-4xl lg:text-5xl lg:whitespace-nowrap">
+              <span className="inline-flex flex-wrap items-baseline justify-center gap-x-[0.25em]">
+                {headingWords.map((w: string, i: number) => (
+                  <span key={w + i} className="inline-block overflow-hidden align-bottom pr-[0.15em] pb-[0.05em]">
+                    <motion.span variants={wordVariant} custom={i} className="inline-block">
+                      {w}
+                    </motion.span>
+                  </span>
+                ))}
+                <span className="inline-block overflow-hidden align-bottom pr-[0.25em] pb-[0.05em] mx-[0.05em]">
+                  <motion.span variants={wordVariant} custom={headingWords.length} className="inline-block">
+                    <span className="inline-block bg-clip-text text-transparent italic font-medium bg-gradient-to-r from-amber-600 via-yellow-400 to-amber-600 px-1">
+                      {data.headingHighlight}
+                    </span>
                   </motion.span>
                 </span>
-              ))}
-              <span className="inline-block overflow-hidden align-bottom pr-[0.35em] pb-[0.15em] mx-[0.05em]">
-                <motion.span variants={wordVariant} custom={headingWords.length} className="inline-block">
-                  <span className="inline-block bg-clip-text text-transparent italic font-medium bg-gradient-to-r from-amber-600 via-yellow-400 to-amber-600 px-1">
-                    {data.headingHighlight}
-                  </span>
-                </motion.span>
               </span>
             </h2>
           </motion.div>

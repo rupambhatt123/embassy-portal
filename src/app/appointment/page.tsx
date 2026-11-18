@@ -1,6 +1,5 @@
 "use client";
 
-// Save as: src/app/appointment/page.tsx
 import React, { useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence, useReducedMotion, type Variants } from "framer-motion";
@@ -335,16 +334,8 @@ export default function AppointmentPage() {
                       />
                       {headerStrip.badge}
                     </motion.p>
-                    <h2 className="mt-2 font-serif font-bold text-slate-800 tracking-tight leading-[1.1] text-3xl sm:text-5xl">
-                      {String(headerStrip.title)
-                        .split(" ")
-                        .map((w: string, i: number) => (
-                          <span key={w + i} className="inline-block overflow-hidden align-bottom pr-[0.25em] pb-[0.1em]">
-                            <motion.span variants={wordVariant} custom={i} className="inline-block">
-                              {w}
-                            </motion.span>
-                          </span>
-                        ))}
+                    <h2 className="mt-2 font-serif font-bold text-slate-800 tracking-tight leading-[1.15] text-2xl sm:text-3xl lg:text-4xl lg:whitespace-nowrap">
+                      {headerStrip.title}
                     </h2>
                   </div>
 

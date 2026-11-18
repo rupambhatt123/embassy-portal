@@ -252,9 +252,9 @@ export default function ServicesPage() {
                   initial="hidden"
                   whileInView="show"
                   viewport={{ once: true, amount: 0.3 }}
-                  className="group relative py-12"
+                  className="group relative py-12 px-6 rounded-3xl transition-all duration-500"
                 >
-                  <span className="pointer-events-none absolute inset-0 bg-gradient-to-r from-amber-100/60 via-sky-100/25 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                  <span className="pointer-events-none absolute inset-0 rounded-3xl bg-gradient-to-r from-amber-100/70 via-sky-100/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700 shadow-sm" />
 
                   <div className="relative grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
                     {/* ---------- Image ---------- */}

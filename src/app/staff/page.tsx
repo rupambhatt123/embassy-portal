@@ -144,9 +144,9 @@ export default function StaffPage() {
               />
             </motion.div>
 
-            <h2 className="font-serif font-bold text-slate-800 tracking-tight leading-[1.2] text-3xl sm:text-4xl lg:text-5xl">
+            <h2 className="font-serif font-bold text-slate-800 tracking-tight leading-[1.2] text-2xl sm:text-4xl lg:text-5xl">
               {headingWords.map((w: string, i: number) => (
-                <span key={w + i} className="inline-block overflow-hidden align-bottom pr-[0.25em] pb-[0.08em]">
+                <span key={w + i} className="inline-block overflow-hidden align-bottom pr-[0.2em] pb-[0.06em]">
                   <motion.span variants={wordVariant} custom={i} className="inline-block">
                     {w}
                   </motion.span>
@@ -154,7 +154,7 @@ export default function StaffPage() {
               ))}
               <span className="block pt-1">
                 {highlightWords.map((w: string, i: number) => (
-                  <span key={w + i} className="inline-block overflow-hidden align-bottom pr-[0.35em] pb-[0.15em] mx-[0.05em]">
+                  <span key={w + i} className="inline-block overflow-hidden align-bottom pr-[0.25em] pb-[0.1em] mx-[0.04em]">
                     <motion.span variants={wordVariant} custom={i + headingWords.length} className="inline-block">
                       <motion.span
                         className="inline-block bg-clip-text text-transparent italic font-medium bg-gradient-to-r from-amber-600 via-yellow-400 to-amber-600 px-1"

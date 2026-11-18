@@ -24,16 +24,16 @@ const containerVariants: any = {
   hidden: { opacity: 0 },
   visible: (i = 1) => ({
     opacity: 1,
-    transition: { staggerChildren: 0.025, delayChildren: 0.1 * i },
+    transition: { staggerChildren: 0.02, delayChildren: 0.08 * i },
   }),
 };
 
 const letterVariants: any = {
   hidden: {
     opacity: 0,
-    y: 30,
-    rotateX: -40,
-    filter: "blur(4px)",
+    y: 20,
+    rotateX: -30,
+    filter: "blur(3px)",
   },
   visible: {
     opacity: 1,
@@ -42,8 +42,8 @@ const letterVariants: any = {
     filter: "blur(0px)",
     transition: {
       type: "spring",
-      damping: 16,
-      stiffness: 140,
+      damping: 18,
+      stiffness: 150,
     },
   },
 };
@@ -68,7 +68,7 @@ export default function PageBanner({
   const letters = Array.from(title);
 
   return (
-    <div className="relative w-full overflow-hidden bg-[#07182b] pt-32 sm:pt-40 pb-12 sm:pb-16 border-b border-[#d4af37]/30">
+    <div className="relative w-full overflow-hidden bg-[#07182b] pt-28 sm:pt-40 pb-10 sm:pb-16 border-b border-[#d4af37]/30">
       
       {/* Background Image with Deep Sovereign Gradient Overlay */}
       <div
@@ -80,7 +80,7 @@ export default function PageBanner({
       </div>
 
       {/* Main Banner Content */}
-      <div className="relative z-10 max-w-[1700px] mx-auto px-4 sm:px-8 lg:px-12 w-full space-y-3">
+      <div className="relative z-10 max-w-[1700px] mx-auto px-4 sm:px-8 lg:px-12 w-full space-y-2.5 sm:space-y-3">
         
         {/* Breadcrumbs Navigation */}
         <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-1.5 sm:gap-2 text-[11px] sm:text-xs font-semibold tracking-wide">
@@ -98,12 +98,12 @@ export default function PageBanner({
               {crumb.href ? (
                 <Link
                   href={crumb.href}
-                  className="text-slate-300 hover:text-[#d4af37] transition-colors truncate max-w-[200px]"
+                  className="text-slate-300 hover:text-[#d4af37] transition-colors truncate max-w-[180px] sm:max-w-[200px]"
                 >
                   {crumb.label}
                 </Link>
               ) : (
-                <span className="text-[#d4af37] font-bold truncate max-w-[220px]">
+                <span className="text-[#d4af37] font-bold truncate max-w-[200px] sm:max-w-[220px]">
                   {crumb.label}
                 </span>
               )}
@@ -111,18 +111,18 @@ export default function PageBanner({
           ))}
         </nav>
 
-        {/* Flying Letters Title Animation */}
+        {/* Flying Letters Title Animation (Fully Responsive & Clean Wrap) */}
         <motion.h1
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="text-xl sm:text-3xl lg:text-4xl font-serif font-black text-white tracking-tight leading-snug drop-shadow-md flex flex-wrap max-w-5xl"
+          className="text-xl sm:text-3xl lg:text-4xl font-serif font-black text-white tracking-tight leading-[1.2] drop-shadow-md flex flex-wrap max-w-5xl"
         >
           {letters.map((char, index) => (
             <motion.span
               key={index}
               variants={letterVariants}
-              className={`inline-block ${char === " " ? "w-2 sm:w-3" : ""}`}
+              className={`inline-block ${char === " " ? "w-1.5 sm:w-3" : ""}`}
             >
               {String(char === " " ? "\u00A0" : char)}
             </motion.span>

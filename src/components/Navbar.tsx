@@ -35,10 +35,14 @@ export default function Navbar() {
           : "bg-transparent h-24"
       }`}
     >
-      <div className="max-w-[1700px] mx-auto px-4 sm:px-8 lg:px-12 h-full flex items-center justify-between">
+      <div className="w-full h-full flex items-center justify-between relative px-0 sm:px-8 lg:px-12">
         
-        {/* Left Side Logo: Left-aligned in mobile & desktop, matched footer size */}
-        <Link href="/" prefetch={true} className="h-full flex items-center justify-start group shrink-0 py-1">
+        {/* Maximum negative margin extension to push logo all the way to the screen edge */}
+        <Link 
+          href="/" 
+          prefetch={true} 
+          className="absolute left-0 xl:static h-full flex items-center justify-start group shrink-0 py-1 -ml-8 sm:-ml-12 pl-0"
+        >
           <img
             src="/logo.png"
             alt="Global Diplomatic Mission"
@@ -66,7 +70,7 @@ export default function Navbar() {
         </nav>
 
         {/* Right Side: CTA Button & Mobile Menu Toggle */}
-        <div className="flex items-center gap-3 shrink-0">
+        <div className="flex items-center gap-3 shrink-0 ml-auto xl:ml-0 pr-3 sm:pr-0">
           <Link
             href={ctaButton.path || "/appointment"}
             prefetch={true}

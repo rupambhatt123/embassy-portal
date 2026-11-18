@@ -83,7 +83,7 @@ const itemVariants: Variants = {
 
 function ColumnHeading({ children }: { children: React.ReactNode }) {
   return (
-    <div className="mb-4 sm:mb-6">
+    <div className="mb-4 sm:mb-6 text-left">
       <h4 className="text-white text-base sm:text-lg font-serif font-bold tracking-wide">{children}</h4>
       <motion.span
         aria-hidden
@@ -193,17 +193,17 @@ export default function Footer() {
           viewport={{ once: true, amount: 0.15 }}
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-x-10 lg:gap-12"
         >
-          {/* Column 1: Brand (Left-aligned mobile & desktop logo, matched Navbar size) */}
-          <motion.div variants={columnVariants} custom={0} className="flex flex-col items-start space-y-4">
-            <Link href="/" className="inline-flex items-center group py-2">
+          {/* Column 1: Brand (Exact matched alignment: -ml-10 sm:-ml-14 and pl-0) */}
+          <motion.div variants={columnVariants} custom={0} className="flex flex-col items-start justify-start text-left w-full space-y-4">
+            <Link href="/" className="inline-flex items-center justify-start group py-2 w-full text-left -ml-10 sm:-ml-14 pl-0">
               <img
                 src={typeof logo === "string" ? logo : logo?.src}
                 alt={typeof logo === "string" ? "Logo" : logo?.alt}
                 className="h-14 sm:h-18 lg:h-20 w-auto object-contain drop-shadow-2xl transition-transform duration-200 group-hover:scale-105"
               />
             </Link>
-            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal max-w-sm">{aboutText}</p>
-            <div className="flex items-center gap-3 pt-1">
+            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal max-w-sm text-left">{aboutText}</p>
+            <div className="flex items-center justify-start gap-3 pt-1 w-full text-left">
               {socials.map((s) => s.href && (
                 <motion.a
                   key={s.label}
@@ -222,11 +222,11 @@ export default function Footer() {
           </motion.div>
 
           {/* Column 2: Services */}
-          <motion.div variants={columnVariants} custom={1}>
+          <motion.div variants={columnVariants} custom={1} className="text-left">
             <ColumnHeading>{servicesHeading}</ColumnHeading>
-            <ul>
+            <ul className="text-left">
               {servicesLinks.map((service: { name: string; href: string }, i: number) => (
-                <motion.li key={service.name} variants={itemVariants} custom={i}>
+                <motion.li key={service.name} variants={itemVariants} custom={i} className="text-left">
                   <Link href={service.href} className={linkClass}>
                     <ChevronRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0 text-[#d4af37]" />
                     <span className="leading-snug">{service.name}</span>
@@ -237,11 +237,11 @@ export default function Footer() {
           </motion.div>
 
           {/* Column 3: Quick Navigation */}
-          <motion.div variants={columnVariants} custom={2}>
+          <motion.div variants={columnVariants} custom={2} className="text-left">
             <ColumnHeading>{quickNavHeading}</ColumnHeading>
-            <ul>
+            <ul className="text-left">
               {quickNavLinks.map((link: { name: string; href: string }, i: number) => (
-                <motion.li key={link.name} variants={itemVariants} custom={i}>
+                <motion.li key={link.name} variants={itemVariants} custom={i} className="text-left">
                   <Link href={link.href} className={`${linkClass} font-medium`}>
                     <ChevronRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0 text-[#d4af37]" />
                     <span>{link.name}</span>
@@ -252,9 +252,9 @@ export default function Footer() {
           </motion.div>
 
           {/* Column 4: Contact Desk */}
-          <motion.div variants={columnVariants} custom={3}>
+          <motion.div variants={columnVariants} custom={3} className="text-left">
             <ColumnHeading>{contactHeading}</ColumnHeading>
-            <ul className="space-y-4 sm:space-y-5">
+            <ul className="space-y-4 sm:space-y-5 text-left">
               {contactRows.map((row, i) => {
                 const Icon = row.icon;
                 const body = (
@@ -262,22 +262,22 @@ export default function Footer() {
                     <span className="relative flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-full shrink-0 text-[#d4af37] ring-1 ring-[#d4af37]/40 bg-[#d4af37]/10">
                       <Icon className="relative w-4 h-4 sm:w-[18px] sm:h-[18px]" />
                     </span>
-                    <span className="min-w-0">
-                      <span className="block text-xs sm:text-sm font-semibold text-white leading-snug break-words">
+                    <span className="min-w-0 text-left">
+                      <span className="block text-xs sm:text-sm font-semibold text-white leading-snug break-words text-left">
                         {row.primary}
                       </span>
-                      <span className="block text-[11px] sm:text-xs text-[#00c4d6] mt-0.5">{row.label}</span>
+                      <span className="block text-[11px] sm:text-xs text-[#00c4d6] mt-0.5 text-left">{row.label}</span>
                     </span>
                   </>
                 );
                 return (
-                  <motion.li key={row.label} variants={itemVariants} custom={i}>
+                  <motion.li key={row.label} variants={itemVariants} custom={i} className="text-left">
                     {row.href ? (
-                      <a href={row.href} className="group flex items-start gap-3">
+                      <a href={row.href} className="group flex items-start gap-3 text-left">
                         {body}
                       </a>
                     ) : (
-                      <div className="group flex items-start gap-3">{body}</div>
+                      <div className="group flex items-start gap-3 text-left">{body}</div>
                     )}
                   </motion.li>
                 );
@@ -290,7 +290,7 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="relative z-10">
         <div className="max-w-[1700px] mx-auto px-4 sm:px-8 lg:px-12 py-5 sm:py-6 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-[#d4af37]/20 text-center sm:text-left">
-          <p className="text-xs sm:text-sm text-slate-300 font-medium">
+          <p className="text-xs sm:text-sm text-slate-300 font-medium text-left">
             {legal?.copyright}
           </p>
 
